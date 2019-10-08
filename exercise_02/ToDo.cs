@@ -136,7 +136,7 @@ namespace exercise_02
 
             string i = Console.ReadLine(); 
 
-            switch (i)
+            /*switch (i)
             {
             case "Eins":
                 Console.WriteLine("Du hast EINS eingegeben");
@@ -153,6 +153,91 @@ namespace exercise_02
             default:
                 Console.WriteLine("Die Zahl " + i + " kenne ich nicht");
                 break;
+            }*/ 
+
+            if (i == "Eins")
+            {
+                Console.WriteLine("Du hast EINS eingegeben");
+            }
+
+            if (i == "Zwei")
+            {
+                Console.WriteLine("ZWEI war Deine Wahl");
+            }
+
+            if (i == "Drei")
+            {
+                Console.WriteLine("Du tipptest eine DREI");
+            }
+
+            if (i == "Sieben")
+            {
+                Console.WriteLine("Sauron schenkte genauso viele Ringe den Zwerge, wie du soeben eingetippt hast: SIEBEN!"); 
+            }
+
+            else 
+            {
+                Console.WriteLine("Die Zahl " + i + " kenne ich nicht");
+            }
+        }
+
+        public static void seventhDo()
+        {
+            int [] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+            int i = 0; 
+            while (i < numbers.Length)
+            {
+                Console.WriteLine(numbers[i]); 
+                i++; 
+            }
+        }
+
+        public static void eightDo() 
+        {
+            int i = 0; 
+            string[] someStrings = 
+            {
+                "Hier",
+                "sehen",
+                "wir",
+                "einen",
+                "Array",
+                "von",
+                "Strings"
+            };
+            
+            /*for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(someStrings[i]);
+            }*/ 
+
+            /*while (i < someStrings.Length)
+            {
+                Console.WriteLine(someStrings[i]);
+                i++; 
+            }*/
+
+             
+            /*do
+            {
+                Console.WriteLine(someStrings[i]);
+                i++;
+            }
+            while (i < someStrings.Length);*()
+
+
+            /*while (true)
+            {
+                Console.WriteLine(someStrings[i]);
+                if (i >= someStrings.Length)
+                break;
+                i++;
+            }*/
+
+
+           foreach (string s in someStrings)
+            {
+                Console.WriteLine(s);
             }
         }
     }

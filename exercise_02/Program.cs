@@ -10,13 +10,15 @@ namespace exercise_02
 
             //ToDo.secondDo(); 
 
-           // ToDo.thirdDo(); 
+            // ToDo.thirdDo(); 
 
-           //ToDo.fithDo(); 
+            //ToDo.fithDo(); 
 
-           ToDo.sixthDo(); 
+            //ToDo.sixthDo(); 
            
+            //ToDo.seventhDo(); 
 
+            ToDo.eightDo(); 
         }
     }
 }
