@@ -111,5 +111,49 @@ namespace exercise_02
                 Console.WriteLine("Du hast verloren :("); 
             }
         }
+
+        public static void sixthDo()
+        {
+            /*int i = int.Parse(Console.ReadLine());
+            switch (i)
+            {
+            case 1:
+                Console.WriteLine("Du hast EINS eingegeben");
+                break;
+            case 2:
+                Console.WriteLine("ZWEI war Deine Wahl");
+                break;
+            case 3:
+                Console.WriteLine("Du tipptest eine DREI");
+                break;
+            case 4: 
+                Console.WriteLine("Sauron schenkte genauso viele Ringe den Zwerge, wie du soeben eingetippt hast: SIEBEN!"); 
+                break; 
+            default:
+                Console.WriteLine("Die Zahl " + i + " kenne ich nicht");
+                break;
+            }*/
+
+            string i = Console.ReadLine(); 
+
+            switch (i)
+            {
+            case "Eins":
+                Console.WriteLine("Du hast EINS eingegeben");
+                break;
+            case "Zwei":
+                Console.WriteLine("ZWEI war Deine Wahl");
+                break;
+            case "Drei":
+                Console.WriteLine("Du tipptest eine DREI");
+                break;
+            case "Sieben": 
+                Console.WriteLine("Sauron schenkte genauso viele Ringe den Zwerge, wie du soeben eingetippt hast: SIEBEN!"); 
+                break; 
+            default:
+                Console.WriteLine("Die Zahl " + i + " kenne ich nicht");
+                break;
+            }
+        }
     }
 }

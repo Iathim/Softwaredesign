@@ -12,7 +12,10 @@ namespace exercise_02
 
            // ToDo.thirdDo(); 
 
-           ToDo.fithDo(); 
+           //ToDo.fithDo(); 
+
+           ToDo.sixthDo(); 
+           
 
         }
     }
