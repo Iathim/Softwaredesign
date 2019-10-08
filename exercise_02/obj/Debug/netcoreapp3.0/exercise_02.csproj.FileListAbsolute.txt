@@ -1,0 +1,11 @@
+c:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\exercise_02\bin\Debug\netcoreapp3.0\exercise_02.exe
+C:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\exercise_02\bin\Debug\netcoreapp3.0\exercise_02.deps.json
+C:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\exercise_02\bin\Debug\netcoreapp3.0\exercise_02.runtimeconfig.json
+C:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\exercise_02\bin\Debug\netcoreapp3.0\exercise_02.runtimeconfig.dev.json
+c:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\exercise_02\bin\Debug\netcoreapp3.0\exercise_02.dll
+c:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\exercise_02\bin\Debug\netcoreapp3.0\exercise_02.pdb
+c:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\exercise_02\obj\Debug\netcoreapp3.0\exercise_02.csprojAssemblyReference.cache
+c:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\exercise_02\obj\Debug\netcoreapp3.0\exercise_02.AssemblyInfoInputs.cache
+c:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\exercise_02\obj\Debug\netcoreapp3.0\exercise_02.AssemblyInfo.cs
+c:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\exercise_02\obj\Debug\netcoreapp3.0\exercise_02.dll
+c:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\exercise_02\obj\Debug\netcoreapp3.0\exercise_02.pdb
