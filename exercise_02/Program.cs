@@ -18,7 +18,11 @@ namespace exercise_02
            
             //ToDo.seventhDo(); 
 
-            ToDo.eightDo(); 
+            //ToDo.eightDo(); 
+
+            /*int hex = 0xD42FE3; 
+            Console.WriteLine(hex);*/
+
         }
     }
 }
