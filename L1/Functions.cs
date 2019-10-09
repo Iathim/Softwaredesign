@@ -36,8 +36,11 @@ namespace L1
 
        public static string reverseSentence (string text)
        {
+           string newText = Functions.reverseWords(text);  
 
-           return text; 
+           string newerText = Functions.reverseLetters(newText);
+
+           return newerText; 
        }
     }
 }

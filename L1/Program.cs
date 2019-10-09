@@ -18,7 +18,9 @@ namespace L1
 
             //word = Functions.reverseLetters(word);
             
-            word = Functions.reverseWords(word); 
+            //word = Functions.reverseWords(word); 
+
+            word = Functions.reverseSentence(word); 
 
             Console.WriteLine(word); 
 
