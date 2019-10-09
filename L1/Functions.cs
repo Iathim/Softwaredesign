@@ -20,9 +20,18 @@ namespace L1
 
        public static string reverseWords (string text)
        {
+            string[] textArray = text.Split(" ");
+            string[] reversedArray = new string[textArray.Length];
 
-           return text;
-       }
+            for (int i = 0; i < textArray.Length; i++) 
+            {
+                reversedArray[i] = (textArray[i]);
+                Array.Reverse(reversedArray); 
+            }
+            string reversedString = string.Join(" ", reversedArray);
+            
+            return reversedString;
+            }
 
 
        public static string reverseSentence (string text)
