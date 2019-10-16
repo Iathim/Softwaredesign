@@ -17,7 +17,7 @@ namespace Debugging
             Person root = Familytree.BuildTree();
 
             Person found = Familytree.Find(root);
-            //Debugger: Dad: Philip Battenberg, Mum: Alice Battenberg; Charlie Wales; Dad: Schorsch-Albert York, Mum: Elese Windsor; Lisbeth Bowes-Lyon; Willi Cambridge
+            //Debugger (mit der if Bedingung der ursprünglichen Funktion): Dad: Philip Battenberg, Mum: Alice Battenberg; Charlie Wales; Dad: Schorsch-Albert York, Mum: Elese Windsor; Lisbeth Bowes-Lyon; Willi Cambridge
 
             WriteLine(found);
         }

@@ -19,7 +19,8 @@ namespace Debugging
         public static Person Find(Person person)
         {
             Person ret = null;
-            if (person.LastName != "Battenberg")
+            //if (person.LastName != "Battenberg")
+            if ((DateTime.Now.Year - person.DateOfBirth.Year) > 42) 
                 return person;
 
             ret = Find(person.Mom);
