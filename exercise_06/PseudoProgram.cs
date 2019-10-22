@@ -69,15 +69,55 @@ namespace exercise_06
         {   
             Boolean geschirrGespühlt = false; 
 
-            for (int i = 0; i < geschirrSammlung; i++)
+            for (int i = geschirrSammlung; i > geschirrSammlung; i--)
             {
-                
+                if (geschirrSammlung != 0)
+                {
+                    geschirrSammlung = geschirrSammlung -1; 
+                }
+
+                if(geschirrSammlung == 0)
+                {
+                    geschirrGespühlt = true; 
+                }
+
             }
-            
-
             return geschirrGespühlt; 
-
         }
 
+        public static Boolean entscheidungZwei(Boolean lustGeschirrAbzutrocknen)
+        {
+            Boolean entscheidung = false; 
+            if (lustGeschirrAbzutrocknen == false)
+            {
+                entscheidung = false;
+            }
+
+            else 
+            {
+                entscheidung = true; 
+            }
+
+            return entscheidung; 
+        }
+
+
+        public static string geschirrEinräumen(int geschirrZumEinräumen)
+        {
+            for (int i = 0; i <= geschirrZumEinräumen; i++)
+            {
+                geschirrZumEinräumen = geschirrZumEinräumen -1; 
+            }
+
+            if(geschirrZumEinräumen == 0)
+            
+            return "Geschirr ist eingeräumt"; 
+
+            else 
+            {
+                geschirrEinräumen(geschirrZumEinräumen); 
+                return "Noch nicht fertig"; 
+            }
+        }
     }
 }
