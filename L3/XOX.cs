@@ -33,7 +33,18 @@ namespace L3
 
 
 
-            
+            if (arraySpielfeld[1,1] == "X")
+            {
+                if (arraySpielfeld[2,2] == "X")
+                {
+                    if (arraySpielfeld[3,3] == "X")
+                    {
+                        gameEnd = true; 
+
+                        Console.WriteLine("Herzlichen Glückwunsch, X hat gewonnen!"); 
+                    }
+                }
+            }
 
 
 
