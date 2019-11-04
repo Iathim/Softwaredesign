@@ -16,9 +16,9 @@ namespace exercise_05
 
             Person person4 = new Person {Name = "Alaric Hawke", Alter = 28}; 
 
-            Frau frau1 = new Frau {Name = "Emi Martinius", Alter = 20}; 
+            Frau frau = new Frau {Name = "Emi Martinius", Alter = 20}; 
 
-            Mann mann1 = new Mann {Name = "James Spencer", Alter = 36}; 
+            Mann mann = new Mann {Name = "James Spencer", Alter = 36}; 
 
             Person [] personenArray = new Person [7]; 
             personenArray[0] = person0; 
@@ -26,8 +26,8 @@ namespace exercise_05
             personenArray[2] = person2; 
             personenArray[3] = person3; 
             personenArray[4] = person4;
-            personenArray[5] = frau1; 
-            personenArray[6] = mann1; 
+            personenArray[5] = frau; 
+            personenArray[6] = mann; 
 
 
             Container.MyContainer container = new Container.MyContainer();

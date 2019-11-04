@@ -40,6 +40,8 @@ namespace exercise_05
         }
     }
 
+
+    //Generic class der class MyContainer
     /*public class MyContainer<T>
     {
         private T[] _theObjects;
