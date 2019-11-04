@@ -2,7 +2,7 @@
 
 namespace exercise_05
 {
-     /*class Container
+     class Container
     {
         public class MyContainer
         {
@@ -38,9 +38,9 @@ namespace exercise_05
                 get { return _n; }
             }
         }
-    }*/ 
+    }
 
-    public class MyContainer<T>
+    /*public class MyContainer<T>
     {
         private T[] _theObjects;
         private int _n;
@@ -73,5 +73,5 @@ namespace exercise_05
         {
             get { return _n; }
         }
-    }
+    }*/
 }
