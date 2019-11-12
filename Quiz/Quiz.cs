@@ -8,7 +8,7 @@ namespace Quiz
         {
             int score = 0; 
 
-            int questionsAnswered = 0; 
+            //int questionsAnswered = 0; 
 
             Quizelement.Quizelemente question1 = new Quizelement.Quizelemente{question = "", rightAnswer = "", wrongAnswers = {} }; 
             Quizelement.Quizelemente question2 = new Quizelement.Quizelemente{question = "", rightAnswer = "", wrongAnswers = {} }; 
@@ -19,16 +19,53 @@ namespace Quiz
             Quizelement.Quizelemente question7 = new Quizelement.Quizelemente{question = "", rightAnswer = "", wrongAnswers = {} }; 
             Quizelement.Quizelemente question8 = new Quizelement.Quizelemente{question = "", rightAnswer = "", wrongAnswers = {} }; 
 
+            //menue.showMenue(score); 
+
+            //Menue 
+
+            Console.WriteLine("Sie befinden sich im Menü."); 
+
+            Console.WriteLine("Ihr aktueller Punktestand ist " + score); 
+
+            Console.WriteLine("Geben Sie 1 ein, um das Quiz zu starten."); 
+
+            Console.WriteLine("Geben Sie 2 ein, um ein neues Quizelement zu erstellen."); 
+
+            Console.WriteLine("Geben Sie 3 ein, um das Programm zu beenden"); 
+
+            string inputUser = Console.ReadLine(); 
+
+            if (inputUser == "1")
+            {
+                //Quiz gets started 
+                GamePlay.Game.answerQuestions(); 
+            }
+
+            if (inputUser == "2")
+            {
+                //new Quizelement will be created by the user 
+
+            }
+
+            if (inputUser == "3")
+            { 
+                //Programm will be exited 
+
+            }
+
+            else 
+            { 
+                Console.WriteLine("Bitte geben Sie ein gültiges Zeichen ein: 1, 2 oder 3."); 
+            }
+            
         }
     }
 
 
-    class menue
+    /*class menue
     {
-        public static void showMenue()
+        public static void showMenue(int score)
         {
-            int score = 0; 
-
             Console.WriteLine("Sie befinden sich im Menü."); 
 
             Console.WriteLine("Ihr aktueller Punktestand ist " + score); 
@@ -65,5 +102,5 @@ namespace Quiz
             }
         }
 
-    }
+    }*/
 }

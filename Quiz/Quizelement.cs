@@ -10,6 +10,4 @@ namespace Quizelement
 
         public string[] wrongAnswers; 
     }
-
-  
 }
