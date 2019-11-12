@@ -10,14 +10,14 @@ namespace Quiz
 
             //int questionsAnswered = 0; 
 
-            Quizelement.Quizelemente question1 = new Quizelement.Quizelemente{question = "", rightAnswer = "", wrongAnswers = {} }; 
+            /*Quizelement.Quizelemente question1 = new Quizelement.Quizelemente{question = "", rightAnswer = "", wrongAnswers = {} }; 
             Quizelement.Quizelemente question2 = new Quizelement.Quizelemente{question = "", rightAnswer = "", wrongAnswers = {} }; 
             Quizelement.Quizelemente question3 = new Quizelement.Quizelemente{question = "", rightAnswer = "", wrongAnswers = {} }; 
             Quizelement.Quizelemente question4 = new Quizelement.Quizelemente{question = "", rightAnswer = "", wrongAnswers = {} }; 
             Quizelement.Quizelemente question5 = new Quizelement.Quizelemente{question = "", rightAnswer = "", wrongAnswers = {} }; 
             Quizelement.Quizelemente question6 = new Quizelement.Quizelemente{question = "", rightAnswer = "", wrongAnswers = {} }; 
             Quizelement.Quizelemente question7 = new Quizelement.Quizelemente{question = "", rightAnswer = "", wrongAnswers = {} }; 
-            Quizelement.Quizelemente question8 = new Quizelement.Quizelemente{question = "", rightAnswer = "", wrongAnswers = {} }; 
+            Quizelement.Quizelemente question8 = new Quizelement.Quizelemente{question = "", rightAnswer = "", wrongAnswers = {} }; */
 
             //menue.showMenue(score); 
 
