@@ -43,13 +43,33 @@ namespace Quizelement
 
             string input = Console.ReadLine(); 
 
-            if (input == "ENTER")
+            /*if (input == "ENTER")
             {
 
             }
             else 
             {
                 userWrongQuestion[1] = input; 
+            }*/ 
+
+            while(input != "ENTER")
+            { 
+                for(int i=2; i<5; i++)
+                {
+                    Console.WriteLine("Bitte geben Sie eine weitere falsche Antwort ein oder speichern Sie das Quizelement mit ENTER und kehren zurück zum Menü.");
+                    
+                    string userInput = Console.ReadLine(); 
+                    
+                    if (userInput == "ENTER")
+                    {
+                        break; 
+                    }
+
+                    else
+                    {
+                        userWrongQuestion[i] = userInput;
+                    } 
+                }
             }
 
             return ""; 
