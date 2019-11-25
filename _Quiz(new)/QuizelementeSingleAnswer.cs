@@ -39,7 +39,7 @@ namespace _Quiz_new_
         }
 
 
-        public new QuizElement createQuizElement()
+        public static new QuizElement createQuizElement()
         {
             Console.WriteLine("Please type in your question."); 
 

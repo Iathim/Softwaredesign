@@ -22,19 +22,31 @@ namespace _Quiz_new_
                 createNewQuizelement(); 
             }
 
-
-            else 
-            {
+            
                 if (userSelection == "1")
                 { 
                     return QuizElementTrueFalse.createQuizElement(); 
                 }
-            }
 
+                if (userSelection == "2")
+                {
+                    return QuizElementText.createQuizElement(); 
+                }
 
+                if (userSelection == "3")
+                {
+                    return QuizElementGuess.createQuizElement(); 
+                }
 
+                if (userSelection == "4")
+                {
+                    return QuizElementMultiAnswer.createQuizElement(); 
+                }
 
-            return new QuizElement(); 
+                else
+                {
+                    return QuizElementSingleAnswer.createQuizElement(); 
+                }
         }
     }
 }

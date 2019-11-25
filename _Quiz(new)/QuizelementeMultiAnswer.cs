@@ -24,7 +24,7 @@ namespace _Quiz_new_
         }
 
 
-        public new QuizElement createQuizElement()
+        public static new QuizElement createQuizElement()
         {
             
             return new QuizElement(); 
