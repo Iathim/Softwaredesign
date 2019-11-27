@@ -6,7 +6,7 @@ namespace _Quiz_new_
     {
         Boolean _isTrue; 
 
-        public new void display()
+        public override void display()
         {
             Console.WriteLine(_question);
 
@@ -14,7 +14,7 @@ namespace _Quiz_new_
         }
 
 
-        public new Boolean checkAnswer(string userAnswer)
+        public override Boolean checkAnswer(string userAnswer)
         {
             Boolean answerValue = false; 
 

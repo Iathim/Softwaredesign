@@ -6,7 +6,7 @@ namespace _Quiz_new_
     {
         Answer[] _answers = new Answer[6];   
 
-        public new void display()
+        public override void display()
         {
             Console.WriteLine(_question); 
 
@@ -16,7 +16,7 @@ namespace _Quiz_new_
         }
 
 
-        public new Boolean checkAnswer(string userAnswer)
+        public override Boolean checkAnswer(string userAnswer)
         {
             
 
@@ -27,7 +27,7 @@ namespace _Quiz_new_
         public static new QuizElement createQuizElement()
         {
             
-            return new QuizElement(); 
+            return null; 
         }
     }
 

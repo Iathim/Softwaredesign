@@ -6,7 +6,7 @@ namespace _Quiz_new_
     {
         Answer[] _answers = new Answer[5];  
 
-        public new void display()
+        public override void display()
         {
             Console.WriteLine(_question);
 
@@ -14,7 +14,7 @@ namespace _Quiz_new_
         }
 
 
-        public new Boolean checkAnswer(string userAnswer)
+        public override Boolean checkAnswer(string userAnswer)
         {
             if (userAnswer != "1" || userAnswer != "2" || userAnswer != "3" || userAnswer != "4" || userAnswer != "5" || userAnswer != "6")
             {
@@ -85,7 +85,7 @@ namespace _Quiz_new_
                 
             }
             
-            return new QuizElement(); 
+            return null; 
         }
     }
 }

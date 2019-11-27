@@ -6,7 +6,7 @@ namespace _Quiz_new_
     {
         Answer _answer = new Answer(); 
 
-        public new void display()
+        public override void display()
         {
             Console.WriteLine(_question); 
             
@@ -14,7 +14,7 @@ namespace _Quiz_new_
         }
 
 
-        public new Boolean checkAnswer(string userAnswer)
+        public override Boolean checkAnswer(string userAnswer)
         {
             if (userAnswer == _answer._text)
             {
