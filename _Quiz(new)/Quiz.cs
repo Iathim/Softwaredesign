@@ -4,10 +4,14 @@ namespace _Quiz_new_
 {
     class MainQuiz
     {
+        public static int score; 
+        public static int questionAnswered; 
+
+        //public static List<QuizElement> questions = new List<QuizElement>(); 
         public static void Main(string[] args)
         {
-            
-            
+            //QuizElementText text1 = new QuizElementText[_question = ""]; 
+            //erstellen von Quizelementen in Funktion auslagern 
             
             
             
@@ -20,7 +24,7 @@ namespace _Quiz_new_
                 userInput = Menue.displayMenue(); 
             }
 
-            else
+            else //Swich case mit userInput? 
             {
                 if (userInput == "1")
                 {
