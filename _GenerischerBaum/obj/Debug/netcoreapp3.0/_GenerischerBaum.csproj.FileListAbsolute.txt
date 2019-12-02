@@ -1,0 +1,11 @@
+c:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\_GenerischerBaum\bin\Debug\netcoreapp3.0\_GenerischerBaum.exe
+C:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\_GenerischerBaum\bin\Debug\netcoreapp3.0\_GenerischerBaum.deps.json
+C:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\_GenerischerBaum\bin\Debug\netcoreapp3.0\_GenerischerBaum.runtimeconfig.json
+C:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\_GenerischerBaum\bin\Debug\netcoreapp3.0\_GenerischerBaum.runtimeconfig.dev.json
+c:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\_GenerischerBaum\bin\Debug\netcoreapp3.0\_GenerischerBaum.dll
+c:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\_GenerischerBaum\bin\Debug\netcoreapp3.0\_GenerischerBaum.pdb
+c:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\_GenerischerBaum\obj\Debug\netcoreapp3.0\_GenerischerBaum.csprojAssemblyReference.cache
+c:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\_GenerischerBaum\obj\Debug\netcoreapp3.0\_GenerischerBaum.AssemblyInfoInputs.cache
+c:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\_GenerischerBaum\obj\Debug\netcoreapp3.0\_GenerischerBaum.AssemblyInfo.cs
+c:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\_GenerischerBaum\obj\Debug\netcoreapp3.0\_GenerischerBaum.dll
+c:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\_GenerischerBaum\obj\Debug\netcoreapp3.0\_GenerischerBaum.pdb
