@@ -7,6 +7,8 @@ namespace _GenerischerBaum
     {
         public T TreeContent;
         public List<TreeNode<T>> Children;
+
+        public TreeNode<T> Parent;
         
         public TreeNode()
         {
@@ -29,9 +31,25 @@ namespace _GenerischerBaum
         }
 
 
-        public void AppendChild(TreeNode<T> child)
+        public void AppendChild(TreeNode<T> newChild)
         {
-            TreeNode<T> newChildNode = child;
+            TreeNode<T> newChildNode = newChild;
+            
+            if(newChildNode.Parent != null)
+            {
+                int i = 0;
+                
+                foreach(TreeNode<T> child in newChildNode.Parent.Children)
+                {
+                    if(child == newChildNode)
+                    {
+                        break;
+                    }
+                    i++;
+                }
+                newChildNode.Parent.Children.RemoveAt(i);
+            }
+            newChildNode.Parent = this;
             
             Children.Add(newChildNode);
         }

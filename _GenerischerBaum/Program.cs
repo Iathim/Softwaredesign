@@ -7,7 +7,7 @@ namespace _GenerischerBaum
     {
         static void Main(string[] args)
         {
-            var tree = new TreeNode<String>();
+            /*var tree = new TreeNode<String>();
             var root = tree.CreateNode("root");
             var child1 = tree.CreateNode("child1");
             var child2 = tree.CreateNode("child2");
@@ -23,7 +23,36 @@ namespace _GenerischerBaum
             child2.AppendChild(grand21);
             child1.RemoveChild(grand12);
 
-            root.PrintTree(); 
+            root.PrintTree(); */
+
+            var a = Test.testString.GetEnumerator();
+
+            //Console.WriteLine(a);  
+
+            while(a.MoveNext())
+            {
+                Console.WriteLine(a.Current); 
+            }
+
+            //root.ForEach(Func);
         }
+        /*static void Func(Node node)
+        {
+            Console.Write(node + " | ");
+        } 
+        }*/
     }
 }
+
+//root.addListener("AppandChild", HandleAppandChild); 
+//root.addListener("RemoveChild", HandleRemoveChild); 
+
+/*public static void HandleAppandChild()
+{
+    Console.writeLine("AppandChild"); 
+}
+
+public static void HandleRemoveChild()
+{
+    Console.WriteLine("RemoveChild"); 
+}*/
