@@ -1,0 +1,31 @@
+﻿[
+    {
+       "Question": "Is Hux going to die in Star Wars the Rise of Skywalker?", 
+       "Type": "SingleAnswer", 
+       "CorrectAnswer": "Yes", 
+       "Answers": ["No", "Maybe"]
+    },
+
+
+    {
+        "Question": "How many people died during the destruction of the First Death Star?", 
+        "Type": "Guess", 
+        "CorrectAnswer": "1.956.293", 
+        "Tolerance": "0.05"
+    }, 
+
+
+    {
+        "Question": "What are other names for the First Death Star?", 
+        "Type": "MultiAnswer", 
+        "CorrectAnswers": ["DS-1 Orbital Battle Station", "Ultimate Weapon"], 
+        "Answers": ["Starkiller","Planet that makes death", "The Emperors' Baby"]
+    }, 
+
+
+    {
+        "Question": "The Fangroup 501. Legion's biggest Garrison is the 501. German Garrison.", 
+        "Type": "TrueFalse", 
+        "CorrectAnswer": "True"
+    }
+]
