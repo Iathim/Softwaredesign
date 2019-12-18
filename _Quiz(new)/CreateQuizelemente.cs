@@ -7,7 +7,7 @@ namespace _Quiz_new_
         public QuizElement createNewQuizelement()
         {
             Console.WriteLine("What kind of Quizelement do you want to create? Type in /one/ of the following numbers."); 
-            Console.WriteLine("1. True False Question"); 
+            Console.WriteLine("1. True/False Question"); 
             Console.WriteLine("2. Textual Question."); 
             Console.WriteLine("3. Guessing Question."); 
             Console.WriteLine("4. Multiple Choice Question."); 

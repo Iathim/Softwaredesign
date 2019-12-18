@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO; 
 
 namespace _Quiz_new_
 {
@@ -6,7 +7,9 @@ namespace _Quiz_new_
     {
         public void answerQuestions()
         {
-            
+            StreamReader file = new StreamReader(@"Quizelements.json");
+
+            //Json.net 
         }
     }
 }

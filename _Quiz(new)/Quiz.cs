@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO; 
 
 namespace _Quiz_new_
 {
@@ -12,7 +13,7 @@ namespace _Quiz_new_
         {
             //QuizElementText text1 = new QuizElementText[_question = ""]; 
             //erstellen von Quizelementen in Funktion auslagern 
-            
+             StreamReader file = new StreamReader(@"Quizelements.json");
             
             
             
@@ -42,8 +43,6 @@ namespace _Quiz_new_
                     //exit game 
                 }
             }
-
-
         }
     }
 }
