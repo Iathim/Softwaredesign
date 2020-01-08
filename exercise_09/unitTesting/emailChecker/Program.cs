@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace exercise_09
+namespace emailChecker
 {
     class Program
     {
@@ -29,12 +29,12 @@ namespace exercise_09
             }
 
 
-        public static string Test (string email)
+        public static void Test (string email)
         {
             if (mail.IsEmailAddress(email))
-                return("TEST PASSED: " + email + " korrekt als Email-Adresse erkannt");
+                Console.WriteLine("TEST PASSED: " + email + " korrekt als Email-Adresse erkannt");
             else
-                return("TEST FAILED: " + email + " nicht als Email-Adresse erkannt.");
+                Console.WriteLine("TEST FAILED: " + email + " nicht als Email-Adresse erkannt.");
         }
     }
 }

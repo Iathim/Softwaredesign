@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.0": {
-      "exercise_09/1.0.0": {
+      "emailChecker/1.0.0": {
         "runtime": {
-          "exercise_09.dll": {}
+          "emailChecker.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "exercise_09/1.0.0": {
+    "emailChecker/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

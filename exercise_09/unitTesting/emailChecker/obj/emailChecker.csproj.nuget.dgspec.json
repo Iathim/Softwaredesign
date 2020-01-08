@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\exercise_09\\exercise_09.csproj": {}
+    "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\exercise_09\\unitTesting\\emailChecker\\emailChecker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\exercise_09\\exercise_09.csproj": {
+    "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\exercise_09\\unitTesting\\emailChecker\\emailChecker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\exercise_09\\exercise_09.csproj",
-        "projectName": "exercise_09",
-        "projectPath": "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\exercise_09\\exercise_09.csproj",
+        "projectUniqueName": "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\exercise_09\\unitTesting\\emailChecker\\emailChecker.csproj",
+        "projectName": "emailChecker",
+        "projectPath": "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\exercise_09\\unitTesting\\emailChecker\\emailChecker.csproj",
         "packagesPath": "C:\\Users\\Merit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\exercise_09\\obj\\",
+        "outputPath": "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\exercise_09\\unitTesting\\emailChecker\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Merit\\AppData\\Roaming\\NuGet\\NuGet.Config"
