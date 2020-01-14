@@ -1,0 +1,8 @@
+C:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\exercise_08\Operations\bin\Debug\netstandard2.0\Operations.deps.json
+C:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\exercise_08\Operations\bin\Debug\netstandard2.0\Operations.dll
+C:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\exercise_08\Operations\bin\Debug\netstandard2.0\Operations.pdb
+C:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\exercise_08\Operations\obj\Debug\netstandard2.0\Operations.csprojAssemblyReference.cache
+C:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\exercise_08\Operations\obj\Debug\netstandard2.0\Operations.AssemblyInfoInputs.cache
+C:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\exercise_08\Operations\obj\Debug\netstandard2.0\Operations.AssemblyInfo.cs
+C:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\exercise_08\Operations\obj\Debug\netstandard2.0\Operations.dll
+C:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\exercise_08\Operations\obj\Debug\netstandard2.0\Operations.pdb
