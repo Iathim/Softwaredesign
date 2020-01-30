@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\_Abschlussaufgabe_Textadventure.csproj",
-      "projectName": "_Abschlussaufgabe_Textadventure",
-      "projectPath": "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\_Abschlussaufgabe_Textadventure.csproj",
+      "projectUniqueName": "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\Code.csproj",
+      "projectName": "Code",
+      "projectPath": "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\Code.csproj",
       "packagesPath": "C:\\Users\\Merit\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\obj\\",
+      "outputPath": "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Merit\\AppData\\Roaming\\NuGet\\NuGet.Config"

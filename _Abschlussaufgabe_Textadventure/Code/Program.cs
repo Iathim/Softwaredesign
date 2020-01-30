@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _Abschlussaufgabe_Textadventure
+namespace Code
 {
     class Program
     {
