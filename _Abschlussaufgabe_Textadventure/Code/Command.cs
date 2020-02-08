@@ -13,7 +13,7 @@ namespace Code
             Console.WriteLine(commands.commands); 
         }
 
-        public void useCommands(PlayerCharacter character, Area actualArea, Area[] areas, Commands commands)
+        public static void useCommands(PlayerCharacter character, Area actualArea, Area[] areas, Commands commands)
         {
             showCommands(commands); 
 
@@ -78,7 +78,7 @@ namespace Code
             } 
         }
 
-        public void saveGame()
+        public static void saveGame()
         {
 
         }
