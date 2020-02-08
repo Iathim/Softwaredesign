@@ -12,7 +12,7 @@ namespace Code
 
             if (remainingHP == 0)
             {
-                defendingCharacter.isAlive = false;
+                defendingCharacter.isDead = true;
 
                 if (defendingCharacter.isPlayerCharacter == false)
                 {
@@ -45,21 +45,32 @@ namespace Code
 
        public override void dropItem(Character character, Area area)
        {
-            Item selectedItem = character.inventory[0];
+           List<Item> inventory = character.inventory; 
 
-            Console.WriteLine(character.name + " dropped " + selectedItem + " into the are"); 
+            foreach (Item aItem in inventory)
+            {
+                Console.WriteLine(character.name + " dropped " + aItem + " into the area."); 
 
-            area.items.Add(selectedItem); 
+                area.items.Add(aItem); 
+            } 
        } 
 
        public override void talk(NPC character)
        {
-           Console.WriteLine(character.dialogue); 
+           if ( character.isDead == true)
+           {
+               Console.WriteLine("There is no one to talk to here. Maybe you could talk a bit to yourself and hear it echo of the walls?"); 
+           }
+
+           else
+           {
+                Console.WriteLine(character.dialogue);
+           } 
        } 
 
        public override void dies(Character character)
        {
-           character.isAlive = false; 
+           character.isDead = true; 
 
            Console.WriteLine(character.name + " collapses on the floor and vanishes in a cloud of smoke. Strange."); 
        }
