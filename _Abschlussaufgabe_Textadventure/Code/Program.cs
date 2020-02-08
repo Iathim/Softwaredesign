@@ -5,6 +5,15 @@ namespace Code
 {
     class Program
     {
+        public static void start(PlayerCharacter character, Area actualArea, Area[] areas, Commands commands)
+        {
+            Console.WriteLine(actualArea.description); 
+
+            while(true)
+            {
+                Commands.useCommands(character, actualArea, areas, commands); 
+            }
+        }
         static void Main(string[] args)
         {
             List<Item> items1 = new List<Item>(); 
@@ -39,19 +48,19 @@ namespace Code
             npcItem5.Add(new Item("Stick", "May as well be a straw!"));
 
 
-            NPC nPC1 = new NPC("Hans", 20, 2, false, false, npcItem1, "Haha I'm evil.");
-            NPC nPC2 = new NPC("Kans", 20, 2, false, false, npcItem2, "Haha."); 
-            NPC nPC3 = new NPC("Sans", 20, 2, false, false, npcItem3, "OI!"); 
-            NPC nPC4 = new NPC("Fans", 20, 2, false, false, npcItem4, "Whot."); 
-            NPC nPC5 = new NPC("Lans", 20, 2, false, false, npcItem5, "Banana!");  
+            NPC nPC1 = new NPC("Hans", 20, 2, false, false, npcItem1, "Haha I'm evil.", "Ouch!");
+            NPC nPC2 = new NPC("Kans", 20, 2, false, false, npcItem2, "Haha.", "Ouch!"); 
+            NPC nPC3 = new NPC("Sans", 20, 2, false, false, npcItem3, "OI!", "Ouch!"); 
+            NPC nPC4 = new NPC("Fans", 20, 2, false, false, npcItem4, "Whot.", "Ouch!"); 
+            NPC nPC5 = new NPC("Lans", 40, 2, false, false, npcItem5, "Banana!", "Ouch!");  
 
-            Area areaN = new Area("Grün", items1, nPC1, "normal", "n"); 
-            Area areaE = new Area("Rot", items2, nPC2, "normal", "e");
-            Area areaS = new Area("Blau", items3, nPC3, "normal", "s");
-            Area areaW = new Area("Lila", items4, nPC4, "normal", "w");
-            Area areaM = new Area("Gelb", items5, nPC5, "normal", "m");
+            Area areaN = new Area("Grün", items1, nPC1, "normal", "n", false); 
+            Area areaE = new Area("Rot", items2, nPC2, "normal", "e", false);
+            Area areaS = new Area("Blau", items3, nPC3, "normal", "s", false);
+            Area areaW = new Area("Lila", items4, nPC4, "normal", "w", false);
+            Area areaM = new Area("Gelb", items5, nPC5, "normal", "m", true);
 
-            Area[] areas = null; 
+            Area[] areas = new Area[5]; 
             areas[0] = areaM; 
             areas[1] = areaN; 
             areas[2] = areaE; 
@@ -62,9 +71,9 @@ namespace Code
 
             PlayerCharacter player = new PlayerCharacter("MainDude", 100, 20, false, true, null);
 
-            Commands commands = new Commands("commands(c), look(l), move (m), talk to NPC (talk), inventory(i), take item(take), drop item(d), save(s), quit(q)"); 
+            Commands commands = new Commands("commands(c), look(l), move (m), talk to NPC (talk), attack(a), inventory(i), take item(take), drop item(d), save(s), quit(q)"); 
 
-            Commands.useCommands(player, actualArea, areas, commands); 
+            start(player, actualArea, areas, commands); 
         }
     }
 }
