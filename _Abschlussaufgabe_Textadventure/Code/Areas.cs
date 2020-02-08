@@ -9,5 +9,6 @@ namespace Code
         public List<Item> items;
         public Character NPC; 
         public string type; 
+        public string position;  
     }
 }
