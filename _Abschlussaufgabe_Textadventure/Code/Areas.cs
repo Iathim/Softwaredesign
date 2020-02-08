@@ -7,7 +7,7 @@ namespace Code
     {
         public string destription;  
         public List<Item> items;
-        public Character NPC; 
+        public NPC NPC; 
         public string type; 
         public string position;  
     }
