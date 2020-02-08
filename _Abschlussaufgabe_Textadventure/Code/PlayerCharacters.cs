@@ -119,52 +119,10 @@ namespace Code
                     }
                 }
 
-           if (positon == "n" || positon == "north")
+           if (positon == "n" || positon == "north" || positon == "e" || positon == "east" || positon == "s" || positon == "south" || positon == "w" || positon == "west")
            {
-               foreach (Area aArea in areas)
-                {
-                    if (aArea.position == "m" || aArea.position == "middle")
-                    {
-                        actualArea = aArea; 
-                        Console.WriteLine(aArea.destription); 
-                    }
-                }
-           }
-
-           if (positon == "e" || positon == "east")
-           {
-               foreach (Area aArea in areas)
-                {
-                    if (aArea.position == "m" || aArea.position == "middle")
-                    {
-                        actualArea = aArea; 
-                        Console.WriteLine(aArea.destription); 
-                    }
-                }
-           }
-
-           if (positon == "s" || positon == "south")
-           {
-               foreach (Area aArea in areas)
-                {
-                    if (aArea.position == "m" || aArea.position == "middle")
-                    {
-                        actualArea = aArea; 
-                        Console.WriteLine(aArea.destription); 
-                    }
-                }
-           }
-
-           if (positon == "w" || positon == "west")
-           {
-               foreach (Area aArea in areas)
-                {
-                    if (aArea.position == "m" || aArea.position == "middle")
-                    {
-                        actualArea = aArea; 
-                        Console.WriteLine(aArea.destription); 
-                    }
-                }
+               actualArea = middleArea; 
+               Console.WriteLine(middleArea.destription); 
            }
 
            else
