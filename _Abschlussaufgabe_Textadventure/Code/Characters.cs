@@ -8,7 +8,7 @@ namespace Code
        public string name; 
        public int HP; 
        public int damage; 
-       public bool isAlive = true; 
+       public bool isDead; 
        public bool isPlayerCharacter; 
        public List<Item> inventory; 
 

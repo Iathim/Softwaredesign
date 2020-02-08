@@ -23,7 +23,7 @@ namespace Code
 
                if (remainingHP <= 0)
                {
-                   defendingCharacter.isAlive = false;
+                   defendingCharacter.isDead = false;
 
                    if (defendingCharacter.isPlayerCharacter == false)
                    {
@@ -91,7 +91,7 @@ namespace Code
 
        public override void dies(Character character)
        {
-            character.isAlive = false; 
+            character.isDead = false; 
 
             Console.WriteLine("You managed to get " + character.name + " killed. You " + character.name + " sees the light at the end of the tunnel and walks towards it"); 
             Console.WriteLine("GAME OVER"); 
@@ -246,7 +246,7 @@ namespace Code
 
                 foreach (Item aItem in items)
                 {
-                    if(aItem.name == userInput)
+                    if (aItem.name == userInput)
                     {
                         character.putItemnInInventory(aItem, character); 
                     }
