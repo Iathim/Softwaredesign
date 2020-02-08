@@ -5,7 +5,17 @@ namespace Code
 {
      public class PlayerCharacter : Character
     {
-       public override void attack(Character attackingCharacter, Character defendingCharacter, Area area)
+        public PlayerCharacter(string _name, int _hp, int _damage, bool _isDead, bool _isPlayerCharacter, List<Item> _inventory)
+        : base (_name, _hp, _damage, _isDead, _isPlayerCharacter, _inventory)
+        {
+            this.name = _name; 
+            this.HP = _hp; 
+            this.damage = _damage; 
+            this.isDead = _isDead; 
+            this.isPlayerCharacter = _isPlayerCharacter; 
+            this.inventory = _inventory; 
+        }
+       public override void attack(PlayerCharacter attackingCharacter, NPC defendingCharacter, Area area)
        {
            Console.WriteLine("Are you sure you want to attack " + defendingCharacter.name + "?");
            Console.WriteLine("Type y or yes to confirm."); 
@@ -29,9 +39,9 @@ namespace Code
                    {
                        Console.WriteLine("Congratulations! You killed " + defendingCharacter.name); 
 
-                       dropItem(defendingCharacter, area);
+                       defendingCharacter.dropItem(defendingCharacter, area);
 
-                       dies(defendingCharacter);  
+                       defendingCharacter.dies(defendingCharacter);  
                    }
 
                    else 
@@ -45,7 +55,7 @@ namespace Code
        }
 
 
-       protected override int damageOfAttack(Character attackingCharacter, Character defendingCharacter)
+       public override int damageOfAttack(PlayerCharacter attackingCharacter, NPC defendingCharacter)
        {
            int HP = defendingCharacter.HP; 
 
@@ -57,7 +67,8 @@ namespace Code
        }
 
 
-       public override void dropItem(Character character, Area area)
+       //public override void dropItem(PlayerCharacter character, Area area)
+       public void dropItem(PlayerCharacter character, Area area)
        {
            Console.Write("Which Item would you like to drop?"); 
 
@@ -74,7 +85,7 @@ namespace Code
 
            foreach (Item aItem in inventory)
             {
-                if (userInput == aItem.name)
+                if (userInput == aItem.Name)
                 {
                 area.items.Add(aItem); 
                 inventory.Remove(aItem);
@@ -89,7 +100,8 @@ namespace Code
        } 
 
 
-       public override void dies(Character character)
+       //public override void dies(Character character)
+       public void dies (PlayerCharacter character)
        {
             character.isDead = false; 
 
@@ -132,7 +144,7 @@ namespace Code
            if (positon == "n" || positon == "north" || positon == "e" || positon == "east" || positon == "s" || positon == "south" || positon == "w" || positon == "west")
            {
                actualArea = middleArea; 
-               Console.WriteLine(middleArea.destription); 
+               Console.WriteLine(middleArea.description); 
            }
 
            else
@@ -154,7 +166,7 @@ namespace Code
                             if (aArea.position == "n" || aArea.position == "north")
                             {
                                 actualArea = aArea; 
-                                Console.WriteLine(aArea.destription); 
+                                Console.WriteLine(aArea.description); 
                             }
                         }
                         break; 
@@ -166,7 +178,7 @@ namespace Code
                             if (aArea.position == "e" || aArea.position == "east")
                             {
                                 actualArea = aArea; 
-                                Console.WriteLine(aArea.destription); 
+                                Console.WriteLine(aArea.description); 
                             }
                         }
                         break;
@@ -178,7 +190,7 @@ namespace Code
                             if (aArea.position == "s" || aArea.position == "south")
                             {
                                 actualArea = aArea; 
-                                Console.WriteLine(aArea.destription); 
+                                Console.WriteLine(aArea.description); 
                             }
                         }
                         break;
@@ -190,7 +202,7 @@ namespace Code
                             if (aArea.position == "w" || aArea.position == "west")
                             {
                                 actualArea = aArea; 
-                                Console.WriteLine(aArea.destription); 
+                                Console.WriteLine(aArea.description); 
                             }
                         }
                         break;
@@ -246,7 +258,7 @@ namespace Code
 
                 foreach (Item aItem in items)
                 {
-                    if (aItem.name == userInput)
+                    if (aItem.Name == userInput)
                     {
                         character.putItemnInInventory(aItem, character); 
                     }

@@ -10,17 +10,27 @@ namespace Code
        public int damage; 
        public bool isDead; 
        public bool isPlayerCharacter; 
-       public List<Item> inventory; 
+       public List<Item> inventory;
+
+        public Character(string _name, int _hp, int _damage, bool _isDead, bool _isPlayerCharacter, List<Item> _inventory)
+        {
+            this.name = _name; 
+            this.HP = _hp; 
+            this.damage = _damage; 
+            this.isDead = _isDead; 
+            this.isPlayerCharacter = _isPlayerCharacter; 
+            this.inventory = _inventory; 
+        }
 
 
-       public abstract void attack(Character attackingCharacter, Character defendingCharacter, Area area);
+       public abstract void attack(PlayerCharacter attackingCharacter, NPC defendingCharacter, Area area);
 
-       protected abstract int damageOfAttack(Character attackingCharacter, Character defendingCharacter); 
+       public abstract int damageOfAttack(PlayerCharacter attackingCharacter, NPC defendingCharacter); 
 
-       public abstract void dropItem(Character character, Area area); 
+       //public abstract void dropItem(PlayerCharacter character, Area area); 
 
        public abstract void talk(NPC charakterToTalkTo);
 
-       public abstract void dies(Character character);  
+       //public abstract void dies(Character character);  
     }
 }

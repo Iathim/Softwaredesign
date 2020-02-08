@@ -6,7 +6,20 @@ namespace Code
      public class NPC : Character
     {
         public string dialogue; 
-       public override void attack(Character attackingCharacter, Character defendingCharacter, Area area)
+
+        public NPC(string _name, int _hp, int _damage, bool _isDead, bool _isPlayerCharacter, List<Item> _inventory, string _dialogue)
+        : base (_name, _hp, _damage, _isDead, _isPlayerCharacter, _inventory)
+        {
+            this.name = _name; 
+            this.HP = _hp; 
+            this.damage = _damage; 
+            this.isDead = _isDead; 
+            this.isPlayerCharacter = _isPlayerCharacter; 
+            this.inventory = _inventory;
+            this.dialogue = _dialogue;  
+        }
+
+       public override void attack(PlayerCharacter attackingCharacter, NPC defendingCharacter, Area area)
        {
            int remainingHP = damageOfAttack(attackingCharacter, defendingCharacter); 
 
@@ -32,7 +45,7 @@ namespace Code
             }
        }
 
-       protected override int damageOfAttack(Character attackingCharacter, Character defendingCharacter)
+       public override int damageOfAttack(PlayerCharacter defendingCharacter, NPC attackingCharacter)
        {
            int HP = defendingCharacter.HP; 
 
@@ -43,7 +56,8 @@ namespace Code
            return newHP;
        }
 
-       public override void dropItem(Character character, Area area)
+       //public override void dropItem(Character character, Area area)
+       public void dropItem(NPC character, Area area)
        {
            List<Item> inventory = character.inventory; 
 
@@ -68,7 +82,8 @@ namespace Code
            } 
        } 
 
-       public override void dies(Character character)
+       //public override void dies(Character character)
+       public void dies(NPC character)
        {
            character.isDead = true; 
 

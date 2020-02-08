@@ -6,7 +6,12 @@ namespace Code
     public class Commands
     {
         //public string commands = "commands(c), look(l), move (m), talk to NPC (talk), inventory(i), take item(take), drop item(d), save(s), quit(q)";
-        public string commands;  
+        public string commands; 
+
+        public Commands(string command)
+        {
+            commands = command; 
+        }
 
         public static void showCommands(Commands commands)
         {
@@ -30,7 +35,7 @@ namespace Code
 
                 case "l": 
                 case "look": 
-                Console.WriteLine(actualArea.destription); 
+                Console.WriteLine(actualArea.description); 
                 break; 
 
                 case "talk": 

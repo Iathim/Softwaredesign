@@ -12,8 +12,25 @@ namespace Code
         public string riddle;
         public string riddleAnswer; 
 
+        public LockedArea (string _description, List<Item> _items, NPC _NPC, string _type, string _position, bool _isOpen, string _reasonWhyLocked, string _consequenzFailure,
+        string _consequenzSuccess, string _riddle, string _riddleAnswer)
+        : base (_description, _items, _NPC, _type, _position)
+        {
+            this.description = _description; 
+            this.items = _items; 
+            this.NPC = _NPC; 
+            this.type = _type;
+            this.position = _position; 
+            this.isOpen = _isOpen; 
+            this.reasonWhyLocked = _reasonWhyLocked; 
+            this.consequenzFailure = _consequenzFailure; 
+            this.consequenzSuccess = _consequenzSuccess; 
+            this.riddle = _riddle; 
+            this.riddleAnswer = _riddleAnswer; 
+        }
 
-        public static void riddleSolution(LockedArea area, Character character)
+
+        public static void riddleSolution(LockedArea area, PlayerCharacter character)
         {
             /*Console.WriteLine("You tried to open the door but failed miserably."); 
             Console.WriteLine("Next to the door a panel started blinking after extending out of the wall."); 
