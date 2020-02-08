@@ -13,7 +13,11 @@ namespace Code
 
             PlayerCharacter _player; 
 
-            NPC[] _NPCs;*/ 
+            NPC[] _NPCs;*/
+
+            Area area = null; 
+
+            NPC npc = area.NPC; 
 
             Console.WriteLine("Hello World!");
         }
