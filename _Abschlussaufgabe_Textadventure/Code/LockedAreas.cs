@@ -5,7 +5,7 @@ namespace Code
 {
     public class LockedArea : Area
     {
-        public bool isLocked = true;
+        public bool isOpen;
         public string reasonWhyLocked;
         public string consequenzFailure;  
         public string consequenzSuccess;    
@@ -33,7 +33,7 @@ namespace Code
 
                 Console.WriteLine(area.consequenzSuccess); 
                 
-                area.isLocked = false; 
+                area.isOpen = false; 
             }
 
             else 
@@ -57,7 +57,7 @@ namespace Code
 
                     character.HP = character.HP - gunDemage; 
 
-                     if (character.HP <= 0)
+                    if (character.HP <= 0)
                     {
                         character.dies(character); 
                     }
