@@ -61,31 +61,38 @@ namespace Code
        {
            Console.Write("Which Item would you like to drop?"); 
 
-           //character.inventory.ForEach(Console.WriteLine); 
+           List<Item>inventory = character.inventory; 
 
-           Console.WriteLine(inventory); 
+            foreach (Item aItem in inventory)
+            {
+                Console.WriteLine(inventory);
+            } 
 
-           Console.WriteLine("Please write the position of the item as number."); 
+           Console.WriteLine("Please write the name of the item you'd like to drop."); 
 
            string userInput = Console.ReadLine(); 
 
-           int itemNumber = int.Parse(userInput);
-
-           Item selectedItem = inventory[itemNumber];
-
-           area.items.Add(selectedItem); 
+           foreach (Item aItem in inventory)
+            {
+                if (userInput == aItem.name)
+                {
+                area.items.Add(aItem); 
+                inventory.Remove(aItem);
+                }
+            }     
        } 
 
 
        public override void talk(NPC characterToTalkTo)
        {
-           talk(characterToTalkTo); 
+           characterToTalkTo.talk(characterToTalkTo); 
        } 
 
 
        public override void dies(Character character)
        {
             character.isAlive = false; 
+
             Console.WriteLine("You managed to get " + character.name + " killed. You " + character.name + " sees the light at the end of the tunnel and walks towards it"); 
             Console.WriteLine("GAME OVER"); 
             Console.WriteLine("The Game does quit itself now."); 
@@ -98,9 +105,135 @@ namespace Code
            
        }
 
-       public void move(Area[] areas)
+       public void move(Area actualArea, Area[] areas)
        {
-           
+           string positon = actualArea.position;
+
+           Area middleArea = null;  
+
+           foreach (Area aArea in areas)
+                {
+                    if (aArea.position == "m" || aArea.position == "middle")
+                    {
+                        middleArea = aArea;  
+                    }
+                }
+
+           if (positon == "n" || positon == "north")
+           {
+               foreach (Area aArea in areas)
+                {
+                    if (aArea.position == "m" || aArea.position == "middle")
+                    {
+                        actualArea = aArea; 
+                        Console.WriteLine(aArea.destription); 
+                    }
+                }
+           }
+
+           if (positon == "e" || positon == "east")
+           {
+               foreach (Area aArea in areas)
+                {
+                    if (aArea.position == "m" || aArea.position == "middle")
+                    {
+                        actualArea = aArea; 
+                        Console.WriteLine(aArea.destription); 
+                    }
+                }
+           }
+
+           if (positon == "s" || positon == "south")
+           {
+               foreach (Area aArea in areas)
+                {
+                    if (aArea.position == "m" || aArea.position == "middle")
+                    {
+                        actualArea = aArea; 
+                        Console.WriteLine(aArea.destription); 
+                    }
+                }
+           }
+
+           if (positon == "w" || positon == "west")
+           {
+               foreach (Area aArea in areas)
+                {
+                    if (aArea.position == "m" || aArea.position == "middle")
+                    {
+                        actualArea = aArea; 
+                        Console.WriteLine(aArea.destription); 
+                    }
+                }
+           }
+
+           else
+           {
+               Console.WriteLine("In which direction do you want to go next?"); 
+               Console.WriteLine("n = north, e = east, s = south, w = west"); 
+               Console.WriteLine("Please type in the direction you want to go."); 
+
+               string userInput = Console.ReadLine(); 
+
+               if (userInput == "n" || userInput == "e" || userInput == "s" || userInput == "w")
+               {
+                   switch (userInput)
+                   {
+                       case "n": 
+
+                       foreach (Area aArea in areas)
+                        {
+                            if (aArea.position == "n" || aArea.position == "north")
+                            {
+                                actualArea = aArea; 
+                                Console.WriteLine(aArea.destription); 
+                            }
+                        }
+                        break; 
+
+                        case "e": 
+
+                       foreach (Area aArea in areas)
+                        {
+                            if (aArea.position == "e" || aArea.position == "east")
+                            {
+                                actualArea = aArea; 
+                                Console.WriteLine(aArea.destription); 
+                            }
+                        }
+                        break;
+
+                        case "s": 
+
+                       foreach (Area aArea in areas)
+                        {
+                            if (aArea.position == "s" || aArea.position == "south")
+                            {
+                                actualArea = aArea; 
+                                Console.WriteLine(aArea.destription); 
+                            }
+                        }
+                        break;
+
+                        case "w": 
+
+                       foreach (Area aArea in areas)
+                        {
+                            if (aArea.position == "w" || aArea.position == "west")
+                            {
+                                actualArea = aArea; 
+                                Console.WriteLine(aArea.destription); 
+                            }
+                        }
+                        break;
+                   }
+               }
+
+               else
+               {
+                   Console.WriteLine("This was not a valid input"); 
+               }
+           }
        }
 
        /*public void look(Area area)
@@ -117,8 +250,6 @@ namespace Code
        {
             List <Item> items = area.items; 
 
-            string stringItems = items.ToString(); 
-
             int numberOfItems = area.items.Count; 
 
             if (numberOfItems == 0)
@@ -128,18 +259,29 @@ namespace Code
 
             if (numberOfItems == 1)
             {
-                foreach (Item aPart in items)
+                foreach (Item aItem in items)
                 {
-                    Console.WriteLine(items);
-                    //character.putItemnInInventory(items, character); 
+                    character.putItemnInInventory(aItem, character); 
                 }
             }
 
             else
             {
-                foreach (Item aPart in items)
+                foreach (Item aItem in items)
                 {
-                    Console.WriteLine(items);
+                    Console.WriteLine(aItem);
+                }
+
+                Console.WriteLine("Which Item would you like to take? Please write the name of it."); 
+
+                string userInput = Console.ReadLine();
+
+                foreach (Item aItem in items)
+                {
+                    if(aItem.name == userInput)
+                    {
+                        character.putItemnInInventory(aItem, character); 
+                    }
                 }
             }
        }
