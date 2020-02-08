@@ -5,15 +5,17 @@ namespace Code
 {
     public class DarkArea : Area
     { 
-        public bool isDark; 
+        public bool isDark = true; 
         public Item keyItem; 
+        public string descriptionWhenBright; 
 
 
         public void lightenUp(Item keyItem, DarkArea area, Character character)
         {
             if(keyItem == area.keyItem)
             {
-                area.isDark = true; 
+                area.isDark = false; 
+                Console.WriteLine(area.descriptionWhenBright); 
             }
 
             else 
