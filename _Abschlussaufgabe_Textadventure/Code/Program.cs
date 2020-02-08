@@ -7,17 +7,17 @@ namespace Code
     {
         static void Main(string[] args)
         {
-            /*Area[] _areas; 
+            Area[] areas = null; 
 
-            Area _actualArea; 
+            Area startingArea = null; 
 
-            PlayerCharacter _player; 
+            Area actualArea = startingArea;  
 
-            NPC[] _NPCs;*/
+            PlayerCharacter player = null;
 
-            Area area = null; 
+            Commands commands = null; 
 
-            NPC npc = area.NPC; 
+            Commands.useCommands(player, actualArea, areas, commands); 
 
             Console.WriteLine("Hello World!");
         }
