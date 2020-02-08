@@ -80,7 +80,7 @@ namespace Code
 
         public static void quitGame()
         {
-
+            Environment.Exit(0); 
         }
     }
 }
