@@ -61,11 +61,11 @@ namespace Code
        {
            Console.Write("Which Item would you like to drop?"); 
 
-           List<Item>inventory = character.inventory; 
+           List<Item> inventory = character.inventory; 
 
             foreach (Item aItem in inventory)
             {
-                Console.WriteLine(inventory);
+                Console.WriteLine(aItem);
             } 
 
            Console.WriteLine("Please write the name of the item you'd like to drop."); 
@@ -99,6 +99,16 @@ namespace Code
 
             Commands.quitGame(); 
        }
+
+        public void showInventory(Character character)
+        {
+            List<Item> inventory = character.inventory; 
+
+            foreach (Item aItem in inventory)
+            {
+                Console.WriteLine(aItem);
+            }
+        }
 
        public void useItem(Area area)
        {
