@@ -7,7 +7,9 @@ namespace Code
     {
         public string dialogue; 
 
-        public NPC(string _name, int _hp, int _damage, bool _isDead, bool _isPlayerCharacter, List<Item> _inventory, string _dialogue)
+        public string ifAttacked; 
+
+        public NPC(string _name, int _hp, int _damage, bool _isDead, bool _isPlayerCharacter, List<Item> _inventory, string _dialogue, string _ifAtacked)
         : base (_name, _hp, _damage, _isDead, _isPlayerCharacter, _inventory)
         {
             this.name = _name; 
@@ -16,37 +18,41 @@ namespace Code
             this.isDead = _isDead; 
             this.isPlayerCharacter = _isPlayerCharacter; 
             this.inventory = _inventory;
-            this.dialogue = _dialogue;  
+            this.dialogue = _dialogue;
+            this.ifAttacked = _ifAtacked;   
         }
 
-       public override void attack(PlayerCharacter attackingCharacter, NPC defendingCharacter, Area area)
+       public override void attack(PlayerCharacter defendingCharacter, Area area)
        {
-           int remainingHP = damageOfAttack(attackingCharacter, defendingCharacter); 
+           NPC attackingCharacter = area.NPC; 
 
-            if (remainingHP == 0)
+            int playerHP = defendingCharacter.HP; 
+
+           int remainingHP = damageOfAttack(defendingCharacter, attackingCharacter); 
+
+           playerHP = remainingHP; 
+
+            if (remainingHP <= 0)
             {
                 defendingCharacter.isDead = true;
 
-                if (defendingCharacter.isPlayerCharacter == false)
-                {
-                    Console.WriteLine("Congratulations! You killed " + defendingCharacter.name); 
+                Console.WriteLine("Oh no. " + defendingCharacter.name + ". You got killed by" + attackingCharacter.name); 
+                Console.WriteLine("GAME OVER"); 
+                Console.WriteLine("The Game does quit now."); 
 
-                    defendingCharacter.dropItem(defendingCharacter, area); 
-                }
+                Commands.quitGame();
+            }
 
-                else 
-                {
-                    Console.WriteLine("Oh no. " + defendingCharacter.name + ". You got killed by" + attackingCharacter.name); 
-                    Console.WriteLine("GAME OVER"); 
-                    Console.WriteLine("The Game does quit now."); 
-
-                    Commands.quitGame(); 
-                } 
+            else 
+            {
+                Console.WriteLine("Your remaining HP are " + remainingHP); 
             }
        }
 
        public override int damageOfAttack(PlayerCharacter defendingCharacter, NPC attackingCharacter)
        {
+           Console.WriteLine(attackingCharacter.name + " goes in for an attack."); 
+
            int HP = defendingCharacter.HP; 
 
            int damage = attackingCharacter.damage; 

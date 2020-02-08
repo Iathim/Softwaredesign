@@ -23,7 +23,7 @@ namespace Code
         }
 
 
-       public abstract void attack(PlayerCharacter attackingCharacter, NPC defendingCharacter, Area area);
+       public abstract void attack(PlayerCharacter attackingCharacter, Area area);
 
        public abstract int damageOfAttack(PlayerCharacter attackingCharacter, NPC defendingCharacter); 
 

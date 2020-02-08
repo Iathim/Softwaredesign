@@ -15,9 +15,11 @@ namespace Code
             this.isPlayerCharacter = _isPlayerCharacter; 
             this.inventory = _inventory; 
         }
-       public override void attack(PlayerCharacter attackingCharacter, NPC defendingCharacter, Area area)
+       public override void attack(PlayerCharacter attackingCharacter, Area area)
        {
-           Console.WriteLine("Are you sure you want to attack " + defendingCharacter.name + "?");
+           NPC defendingCharacter = area.NPC;  
+
+           /*Console.WriteLine("Are you sure you want to attack " + defendingCharacter.name + "?");
            Console.WriteLine("Type y or yes to confirm."); 
            
            string userInput = Console.ReadLine(); 
@@ -25,38 +27,36 @@ namespace Code
            if (userInput != "y" || userInput != "yes")
            {
                Console.WriteLine("You decided against attacking " + defendingCharacter.name + ".");  
-           }
+           }*/
            
-           else
-           {
+           /*else
+           {*/
                int remainingHP = damageOfAttack(attackingCharacter, defendingCharacter); 
+
+               defendingCharacter.HP = remainingHP; 
 
                if (remainingHP <= 0)
                {
                    defendingCharacter.isDead = false;
 
-                   if (defendingCharacter.isPlayerCharacter == false)
-                   {
-                       Console.WriteLine("Congratulations! You killed " + defendingCharacter.name); 
+                    Console.WriteLine("Congratulations! You killed " + defendingCharacter.name); 
 
-                       defendingCharacter.dropItem(defendingCharacter, area);
+                    defendingCharacter.dropItem(defendingCharacter, area);
 
-                       defendingCharacter.dies(defendingCharacter);  
-                   }
-
-                   else 
-                   {
-                       Console.WriteLine("Oh no. " + defendingCharacter.name + ". You got killed by" + attackingCharacter.name); 
-
-                       Commands.quitGame(); 
-                   } 
+                    defendingCharacter.dies(defendingCharacter);  
                }
-           } 
+
+               else
+               {
+                   Console.WriteLine(defendingCharacter.name + ":" + defendingCharacter.ifAttacked); 
+               }
+           //} 
        }
 
 
        public override int damageOfAttack(PlayerCharacter attackingCharacter, NPC defendingCharacter)
        {
+           Console.WriteLine("You start to attack " + defendingCharacter.name + " viciously!"); 
            int HP = defendingCharacter.HP; 
 
            int damage = attackingCharacter.damage; 
@@ -116,9 +116,17 @@ namespace Code
         {
             List<Item> inventory = character.inventory; 
 
-            foreach (Item aItem in inventory)
+            if(inventory == null)
             {
-                Console.WriteLine(aItem);
+                Console.WriteLine("There is nothing in here"); 
+            }
+
+            else
+            {
+                foreach (Item aItem in inventory)
+                {
+                    Console.WriteLine(aItem);
+                }
             }
         }
 
@@ -127,7 +135,7 @@ namespace Code
            
        }
 
-       public void move(Area actualArea, Area[] areas)
+       public void move (Area actualArea, Area[] areas)
        {
            string positon = actualArea.position;
 
@@ -221,7 +229,7 @@ namespace Code
            Console.WriteLine(area.destription); 
        }*/
 
-       protected void putItemnInInventory(Item item, Character character)
+       protected void putItemnInInventory(Item item, PlayerCharacter character)
        {
            character.inventory.Add(item);  
        }
@@ -241,7 +249,9 @@ namespace Code
             {
                 foreach (Item aItem in items)
                 {
-                    character.putItemnInInventory(aItem, character); 
+                    Console.WriteLine(aItem); 
+                    character.inventory.Add(aItem); 
+                    //character.putItemnInInventory(aItem, character); 
                 }
             }
 
@@ -265,5 +275,18 @@ namespace Code
                 }
             }
        }
+
+       
+        public void fight(PlayerCharacter player,  Area area)
+        {
+            NPC character = area.NPC; 
+
+            player.attack(player, area); 
+
+            if (character.isDead != true)
+            {
+                character.attack(player, area); 
+            }
+        }
     }
 }
