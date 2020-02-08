@@ -5,7 +5,7 @@ namespace Code
 {
     public class Commands
     {
-        //public string commands = "commands(c), look(l), move (m), inventory(i), take item(t), drop item(d), save (s), quit(q)";
+        //public string commands = "commands(c), look(l), move (m), talk to NPC (talk), inventory(i), take item(take), drop item(d), save(s), quit(q)";
         public string commands;  
 
         public static void showCommands(Commands commands)
@@ -16,6 +16,8 @@ namespace Code
         public void useCommands(PlayerCharacter character, Area actualArea, Area[] areas, Commands commands)
         {
             showCommands(commands); 
+
+            Console.WriteLine("What would you like to do?"); 
 
             string userInput = Console.ReadLine();
 
@@ -31,15 +33,26 @@ namespace Code
                 Console.WriteLine(actualArea.destription); 
                 break; 
 
+                case "talk": 
+                case "talk to": 
+                case "talk to NPC": 
+                actualArea.NPC.talk(actualArea.NPC); 
+                break; 
+
                 case "m":
                 case "move": 
                 character.move(actualArea, areas); 
                 break; 
 
-                case "t": 
+                case "take": 
                 case "take item": 
                 case "take Item": 
                 character.takeItem(actualArea, character); 
+                break; 
+
+                case "i": 
+                case "inventory":
+                character.showInventory(character); 
                 break; 
 
                 case "d":
