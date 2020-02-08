@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Code
 {
     public class Commands
     {
-        //public string commands = "commands(c), look(l), inventory(i), take item(t), drop item(d), save (s), quit(q)";
+        //public string commands = "commands(c), look(l), move (m), inventory(i), take item(t), drop item(d), save (s), quit(q)";
         public string commands;  
 
         public static void showCommands(Commands commands)
@@ -12,65 +13,56 @@ namespace Code
             Console.WriteLine(commands.commands); 
         }
 
-        public void useCommands(PlayerCharacter character, Area area, Commands commands)
+        public void useCommands(PlayerCharacter character, Area actualArea, Area[] areas, Commands commands)
         {
             showCommands(commands); 
 
-            string userInput = Console.ReadLine(); 
+            string userInput = Console.ReadLine();
 
-            if (userInput == "c" || userInput == "commands")
+            switch (userInput)
             {
+                case "c":
+                case "commands":  
                 showCommands(commands); 
-            }
+                break;  
 
-            if (userInput == "l" || userInput == "look")
-            {
-                Console.WriteLine(area.destription); 
-            }
+                case "l": 
+                case "look": 
+                Console.WriteLine(actualArea.destription); 
+                break; 
 
-            if (userInput == "i" || userInput == "inventory")
-            {
-                Console.WriteLine(character.inventory); 
-            }
+                case "m":
+                case "move": 
+                character.move(actualArea, areas); 
+                break; 
 
-            if (userInput == "t" || userInput == "take" || userInput == "take item" || userInput == "take Item")
-            {
-                character.takeItem(area, character); 
-            }
+                case "t": 
+                case "take item": 
+                case "take Item": 
+                character.takeItem(actualArea, character); 
+                break; 
 
-            if (userInput == "d" || userInput == "drop" || userInput == "drop item" || userInput == "drop Item")
-            {
-                character.dropItem(character, area); 
-            }
+                case "d":
+                case "drop item": 
+                case "drop Item": 
+                character.dropItem(character, actualArea);  
+                break; 
 
-            if (userInput == "s" || userInput == "save")
-            {
-                saveGame(); 
-            }
+                case "s":
+                case "save": 
+                saveGame();  
+                break; 
 
-            if (userInput == "q" || userInput == "quit")
-            {
-                Console.WriteLine("Are you sure you want to quit the game?"); 
-                Console.WriteLine("Type 'q' again to confirm."); 
-                
-                string userAcknowlegdment = Console.ReadLine(); 
+                case "q":
+                case "quit":  
+                quitGame();
+                break; 
 
-                if (userAcknowlegdment != "q")
-                {
-                    showCommands(commands); 
-                }
-                
-                else
-                {
-                    quitGame();
-                }
-            }
-
-            else 
-            {
+                default: 
                 Console.WriteLine("I don't understand this. Please use one of the following commands");
-                showCommands(commands);  
-            }
+                showCommands(commands); 
+                break; 
+            } 
         }
 
         public void saveGame()
