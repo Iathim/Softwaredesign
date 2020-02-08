@@ -44,6 +44,11 @@ namespace Code
                 actualArea.NPC.talk(actualArea.NPC); 
                 break; 
 
+                case "a": 
+                case "attack": 
+                character.fight(character, actualArea); 
+                break; 
+
                 case "m":
                 case "move": 
                 character.move(actualArea, areas); 
