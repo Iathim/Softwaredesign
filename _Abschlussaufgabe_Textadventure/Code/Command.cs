@@ -35,7 +35,7 @@ namespace Code
 
                 case "l": 
                 case "look": 
-                Console.WriteLine(actualArea.description); 
+                Console.WriteLine(actualArea.Description); 
                 break; 
 
                 case "talk": 

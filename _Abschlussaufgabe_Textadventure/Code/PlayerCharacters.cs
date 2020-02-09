@@ -8,13 +8,14 @@ namespace Code
         public PlayerCharacter(string _name, int _hp, int _damage, bool _isDead, bool _isPlayerCharacter, List<Item> _inventory)
         : base (_name, _hp, _damage, _isDead, _isPlayerCharacter, _inventory)
         {
-            this.name = _name; 
+            this.Name = _name; 
             this.HP = _hp; 
-            this.damage = _damage; 
-            this.isDead = _isDead; 
-            this.isPlayerCharacter = _isPlayerCharacter; 
-            this.inventory = _inventory; 
+            this.Damage = _damage; 
+            this.IsDead = _isDead; 
+            this.IsPlayerCharacter = _isPlayerCharacter; 
+            this.Inventory = _inventory; 
         }
+
        public override void attack(PlayerCharacter attackingCharacter, Area area)
        {
            NPC defendingCharacter = area.NPC;  
@@ -37,9 +38,9 @@ namespace Code
 
                if (remainingHP <= 0)
                {
-                   defendingCharacter.isDead = false;
+                   defendingCharacter.IsDead = false;
 
-                    Console.WriteLine("Congratulations! You killed " + defendingCharacter.name); 
+                    Console.WriteLine("Congratulations! You killed " + defendingCharacter.Name); 
 
                     defendingCharacter.dropItem(defendingCharacter, area);
 
@@ -48,7 +49,7 @@ namespace Code
 
                else
                {
-                   Console.WriteLine(defendingCharacter.name + ": " + defendingCharacter.ifAttacked); 
+                   Console.WriteLine(defendingCharacter.Name + ": " + defendingCharacter.IfAttacked); 
                }
            //} 
        }
@@ -56,10 +57,10 @@ namespace Code
 
        public override int damageOfAttack(PlayerCharacter attackingCharacter, NPC defendingCharacter)
        {
-           Console.WriteLine("You start to attack " + defendingCharacter.name + " viciously!"); 
+           Console.WriteLine("You start to attack " + defendingCharacter.Name + " viciously!"); 
            int HP = defendingCharacter.HP; 
 
-           int damage = attackingCharacter.damage; 
+           int damage = attackingCharacter.Damage; 
 
            int newHP = HP - damage; 
            
@@ -72,7 +73,7 @@ namespace Code
        {
            Console.Write("Which Item would you like to drop?"); 
 
-           List<Item> inventory = character.inventory; 
+           List<Item> inventory = character.Inventory; 
 
             foreach (Item aItem in inventory)
             {
@@ -87,7 +88,7 @@ namespace Code
             {
                 if (userInput == aItem.Name)
                 {
-                area.items.Add(aItem); 
+                area.Items.Add(aItem); 
                 inventory.Remove(aItem);
                 }
             }     
@@ -103,9 +104,9 @@ namespace Code
        //public override void dies(Character character)
        public void dies (PlayerCharacter character)
        {
-            character.isDead = false; 
+            character.IsDead = false; 
 
-            Console.WriteLine("You managed to get " + character.name + " killed. You " + character.name + " sees the light at the end of the tunnel and walks towards it"); 
+            Console.WriteLine("You managed to get " + character.Name + " killed. You " + character.Name + " sees the light at the end of the tunnel and walks towards it"); 
             Console.WriteLine("GAME OVER"); 
             Console.WriteLine("The Game does quit itself now."); 
 
@@ -114,7 +115,7 @@ namespace Code
 
         public void showInventory(Character character)
         {
-            List<Item> inventory = character.inventory; 
+            List<Item> inventory = character.Inventory; 
 
             if(inventory == null)
             {
@@ -140,20 +141,20 @@ namespace Code
            Area actualArea = null;  
             foreach (Area aArea in areas)
                 {
-                    if(aArea.isActualArea == true) 
+                    if(aArea.IsActualArea == true) 
                     {
                         actualArea = aArea;
                         //Console.WriteLine(actualArea.description); 
                     }
                 }
 
-           string positon = actualArea.position;
+           string positon = actualArea.Position;
 
            Area middleArea = null;  
 
            foreach (Area aArea in areas)
                 {
-                    if (aArea.position == "m" || aArea.position == "middle")
+                    if (aArea.Position == "m" || aArea.Position == "middle")
                     {
                         middleArea = aArea;  
                     }
@@ -163,12 +164,12 @@ namespace Code
            {
                foreach (Area aArea in areas)
                 {
-                    aArea.isActualArea = false; 
+                    aArea.IsActualArea = false; 
                 }
 
                actualArea = middleArea; 
-               middleArea.isActualArea = true; 
-               Console.WriteLine(middleArea.description); 
+               middleArea.IsActualArea = true; 
+               Console.WriteLine(middleArea.Description); 
            }
 
            else
@@ -187,12 +188,12 @@ namespace Code
 
                        foreach (Area aArea in areas)
                         {
-                            if (aArea.position == "n" || aArea.position == "north")
+                            if (aArea.Position == "n" || aArea.Position == "north")
                             {
-                                actualArea.isActualArea = false; 
-                                aArea.isActualArea = true; 
+                                actualArea.IsActualArea = false; 
+                                aArea.IsActualArea = true; 
                                 actualArea = aArea; 
-                                Console.WriteLine(aArea.description); 
+                                Console.WriteLine(aArea.Description); 
                             }
                         }
                         break; 
@@ -201,12 +202,12 @@ namespace Code
 
                        foreach (Area aArea in areas)
                         {
-                            if (aArea.position == "e" || aArea.position == "east")
+                            if (aArea.Position == "e" || aArea.Position == "east")
                             {
-                                actualArea.isActualArea = false; 
-                                aArea.isActualArea = true; 
+                                actualArea.IsActualArea = false; 
+                                aArea.IsActualArea = true; 
                                 actualArea = aArea; 
-                                Console.WriteLine(aArea.description); 
+                                Console.WriteLine(aArea.Description); 
                             }
                         }
                         break;
@@ -215,12 +216,12 @@ namespace Code
 
                        foreach (Area aArea in areas)
                         {
-                            if (aArea.position == "s" || aArea.position == "south")
+                            if (aArea.Position == "s" || aArea.Position == "south")
                             {
-                                actualArea.isActualArea = false; 
-                                aArea.isActualArea = true; 
+                                actualArea.IsActualArea = false; 
+                                aArea.IsActualArea = true; 
                                 actualArea = aArea; 
-                                Console.WriteLine(aArea.description); 
+                                Console.WriteLine(aArea.Description); 
                             }
                         }
                         break;
@@ -229,12 +230,12 @@ namespace Code
 
                        foreach (Area aArea in areas)
                         {
-                            if (aArea.position == "w" || aArea.position == "west")
+                            if (aArea.Position == "w" || aArea.Position == "west")
                             {
-                                actualArea.isActualArea = false; 
-                                aArea.isActualArea = true; 
+                                actualArea.IsActualArea = false; 
+                                aArea.IsActualArea = true; 
                                 actualArea = aArea; 
-                                Console.WriteLine(aArea.description);  
+                                Console.WriteLine(aArea.Description);  
                             }
                         }
                         break;
@@ -255,14 +256,14 @@ namespace Code
 
        protected void putItemnInInventory(Item item, PlayerCharacter character)
        {
-           character.inventory.Add(item);  
+           character.Inventory.Add(item);  
        }
 
        public void takeItem(Area area, PlayerCharacter character)
        {
-            List <Item> items = area.items; 
+            List <Item> items = area.Items; 
 
-            int numberOfItems = area.items.Count; 
+            int numberOfItems = area.Items.Count; 
 
             if (numberOfItems == 0)
             {
@@ -274,7 +275,7 @@ namespace Code
                 foreach (Item aItem in items)
                 {
                     Console.WriteLine(aItem); 
-                    character.inventory.Add(aItem); 
+                    character.Inventory.Add(aItem); 
                     //character.putItemnInInventory(aItem, character); 
                 }
             }
@@ -307,7 +308,7 @@ namespace Code
 
             player.attack(player, area); 
 
-            if (character.isDead != true)
+            if (character.IsDead != true)
             {
                 character.attack(player, area); 
             }

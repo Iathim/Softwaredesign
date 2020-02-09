@@ -5,21 +5,21 @@ namespace Code
 {
      public class NPC : Character
     {
-        public string dialogue; 
+        public string Dialogue; 
 
-        public string ifAttacked; 
+        public string IfAttacked; 
 
         public NPC(string _name, int _hp, int _damage, bool _isDead, bool _isPlayerCharacter, List<Item> _inventory, string _dialogue, string _ifAtacked)
         : base (_name, _hp, _damage, _isDead, _isPlayerCharacter, _inventory)
         {
-            this.name = _name; 
+            this.Name = _name; 
             this.HP = _hp; 
-            this.damage = _damage; 
-            this.isDead = _isDead; 
-            this.isPlayerCharacter = _isPlayerCharacter; 
-            this.inventory = _inventory;
-            this.dialogue = _dialogue;
-            this.ifAttacked = _ifAtacked;   
+            this.Damage = _damage; 
+            this.IsDead = _isDead; 
+            this.IsPlayerCharacter = _isPlayerCharacter; 
+            this.Inventory = _inventory;
+            this.Dialogue = _dialogue;
+            this.IfAttacked = _ifAtacked;   
         }
 
        public override void attack(PlayerCharacter defendingCharacter, Area area)
@@ -34,9 +34,9 @@ namespace Code
 
             if (remainingHP <= 0)
             {
-                defendingCharacter.isDead = true;
+                defendingCharacter.IsDead = true;
 
-                Console.WriteLine("Oh no. " + defendingCharacter.name + ". You got killed by" + attackingCharacter.name); 
+                Console.WriteLine("Oh no. " + defendingCharacter.Name + ". You got killed by" + attackingCharacter.Name); 
                 Console.WriteLine("GAME OVER"); 
                 Console.WriteLine("The Game does quit now."); 
 
@@ -51,11 +51,11 @@ namespace Code
 
        public override int damageOfAttack(PlayerCharacter defendingCharacter, NPC attackingCharacter)
        {
-           Console.WriteLine(attackingCharacter.name + " goes in for an attack."); 
+           Console.WriteLine(attackingCharacter.Name + " goes in for an attack."); 
 
            int HP = defendingCharacter.HP; 
 
-           int damage = attackingCharacter.damage; 
+           int damage = attackingCharacter.Damage; 
 
            int newHP = HP - damage; 
            
@@ -65,35 +65,35 @@ namespace Code
        //public override void dropItem(Character character, Area area)
        public void dropItem(NPC character, Area area)
        {
-           List<Item> inventory = character.inventory; 
+           List<Item> inventory = character.Inventory; 
 
             foreach (Item aItem in inventory)
             {
-                Console.WriteLine(character.name + " dropped " + aItem + " into the area."); 
+                Console.WriteLine(character.Name + " dropped " + aItem + " into the area."); 
 
-                area.items.Add(aItem); 
+                area.Items.Add(aItem); 
             } 
        } 
 
        public override void talk(NPC character)
        {
-           if ( character.isDead == true)
+           if ( character.IsDead == true)
            {
                Console.WriteLine("There is no one to talk to here. Maybe you could talk a bit to yourself and hear it echo of the walls?"); 
            }
 
            else
            {
-                Console.WriteLine(character.name + ": " + character.dialogue);
+                Console.WriteLine(character.Name + ": " + character.Dialogue);
            } 
        } 
 
        //public override void dies(Character character)
        public void dies(NPC character)
        {
-           character.isDead = true; 
+           character.IsDead = true; 
 
-           Console.WriteLine(character.name + " collapses on the floor and vanishes in a cloud of smoke. Strange."); 
+           Console.WriteLine(character.Name + " collapses on the floor and vanishes in a cloud of smoke. Strange."); 
        }
     }
 }

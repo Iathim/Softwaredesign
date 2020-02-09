@@ -5,31 +5,31 @@ namespace Code
 {
     public class DarkArea : Area
     { 
-        public bool isBright; 
-        public Item keyItem; 
-        public string descriptionWhenBright; 
+        public bool IsDark; 
+        public Item KeyItem; 
+        public string DescriptionWhenBright; 
 
         public DarkArea (string _description, List<Item> _items, NPC _NPC, string _type, string _position, bool _isActualArea, bool _isBright, Item _keyItem, string _descriptionWhenBright)
         : base (_description, _items, _NPC, _type, _position, _isActualArea)
         {
-            this.description = _description; 
-            this.items = _items; 
+            this.Description = _description; 
+            this.Items = _items; 
             this.NPC = _NPC; 
-            this.type = _type;
-            this.position = _position;
-            this.isActualArea = _isActualArea;  
-            this.isBright = _isBright; 
-            this.keyItem = _keyItem; 
-            this.descriptionWhenBright = _descriptionWhenBright; 
+            this.Type = _type;
+            this.Position = _position;
+            this.IsActualArea = _isActualArea;  
+            this.IsDark = _isBright; 
+            this.KeyItem = _keyItem; 
+            this.DescriptionWhenBright = _descriptionWhenBright; 
         }
 
 
         public void lightenUp(Item keyItem, DarkArea area, PlayerCharacter character)
         {
-            if(keyItem == area.keyItem)
+            if(keyItem == area.KeyItem)
             {
-                area.isBright = false; 
-                Console.WriteLine(area.descriptionWhenBright); 
+                area.IsDark = true; 
+                Console.WriteLine(area.DescriptionWhenBright); 
             }
 
             else 

@@ -22,7 +22,7 @@ namespace Code
                 Area actualArea = null;  
             foreach (Area aArea in areas)
                 {
-                    if(aArea.isActualArea == true) 
+                    if(aArea.IsActualArea == true) 
                     {
                         actualArea = aArea;
                         //Console.WriteLine(actualArea.description); 

@@ -5,21 +5,21 @@ namespace Code
 {
     public abstract class Character
     {
-       public string name; 
+       public string Name; 
        public int HP; 
-       public int damage; 
-       public bool isDead; 
-       public bool isPlayerCharacter; 
-       public List<Item> inventory;
+       public int Damage; 
+       public bool IsDead; 
+       public bool IsPlayerCharacter; 
+       public List<Item> Inventory;
 
         public Character(string _name, int _hp, int _damage, bool _isDead, bool _isPlayerCharacter, List<Item> _inventory)
         {
-            this.name = _name; 
+            this.Name = _name; 
             this.HP = _hp; 
-            this.damage = _damage; 
-            this.isDead = _isDead; 
-            this.isPlayerCharacter = _isPlayerCharacter; 
-            this.inventory = _inventory; 
+            this.Damage = _damage; 
+            this.IsDead = _isDead; 
+            this.IsPlayerCharacter = _isPlayerCharacter; 
+            this.Inventory = _inventory; 
         }
 
 
