@@ -9,14 +9,15 @@ namespace Code
         public Item keyItem; 
         public string descriptionWhenBright; 
 
-        public DarkArea (string _description, List<Item> _items, NPC _NPC, string _type, string _position, bool _isBright, Item _keyItem, string _descriptionWhenBright)
-        : base (_description, _items, _NPC, _type, _position)
+        public DarkArea (string _description, List<Item> _items, NPC _NPC, string _type, string _position, bool _isActualArea, bool _isBright, Item _keyItem, string _descriptionWhenBright)
+        : base (_description, _items, _NPC, _type, _position, _isActualArea)
         {
             this.description = _description; 
             this.items = _items; 
             this.NPC = _NPC; 
             this.type = _type;
-            this.position = _position; 
+            this.position = _position;
+            this.isActualArea = _isActualArea;  
             this.isBright = _isBright; 
             this.keyItem = _keyItem; 
             this.descriptionWhenBright = _descriptionWhenBright; 

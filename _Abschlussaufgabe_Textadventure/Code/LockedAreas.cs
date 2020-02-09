@@ -12,15 +12,16 @@ namespace Code
         public string riddle;
         public string riddleAnswer; 
 
-        public LockedArea (string _description, List<Item> _items, NPC _NPC, string _type, string _position, bool _isOpen, string _reasonWhyLocked, string _consequenzFailure,
-        string _consequenzSuccess, string _riddle, string _riddleAnswer)
-        : base (_description, _items, _NPC, _type, _position)
+        public LockedArea (string _description, List<Item> _items, NPC _NPC, string _type, string _position, bool _isActualArea, bool _isOpen, string _reasonWhyLocked,
+         string _consequenzFailure, string _consequenzSuccess, string _riddle, string _riddleAnswer)
+        : base (_description, _items, _NPC, _type, _position, _isActualArea)
         {
             this.description = _description; 
             this.items = _items; 
             this.NPC = _NPC; 
             this.type = _type;
             this.position = _position; 
+            this.isActualArea = _isActualArea; 
             this.isOpen = _isOpen; 
             this.reasonWhyLocked = _reasonWhyLocked; 
             this.consequenzFailure = _consequenzFailure; 
