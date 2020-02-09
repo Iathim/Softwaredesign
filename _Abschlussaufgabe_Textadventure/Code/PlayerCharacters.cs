@@ -19,6 +19,8 @@ namespace Code
        public override void attack(PlayerCharacter attackingCharacter, Area area)
        {
            NPC defendingCharacter = area.NPC;  
+           if (defendingCharacter.IsDead == false)
+           {
 
            /*Console.WriteLine("Are you sure you want to attack " + defendingCharacter.name + "?");
            Console.WriteLine("Type y or yes to confirm."); 
@@ -51,6 +53,12 @@ namespace Code
                {
                    Console.WriteLine(defendingCharacter.Name + ": " + defendingCharacter.IfAttacked); 
                }
+           }
+
+           else 
+           {
+               Console.WriteLine("There is no one here. Out of anger, you attacked a harmless wall."); 
+           }
            //} 
        }
 
@@ -169,6 +177,7 @@ namespace Code
 
                actualArea = middleArea; 
                middleArea.IsActualArea = true; 
+               Console.WriteLine("You're gpoing back to the main room."); 
                Console.WriteLine(middleArea.Description); 
            }
 
