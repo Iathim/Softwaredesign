@@ -89,7 +89,9 @@ namespace Code
 
             PlayerCharacter player = new PlayerCharacter("MainDude", 100, 20, false, true, null);
 
-            Commands commands = new Commands("(commands(c)), look(l), move (m), talk to NPC (talk), attack(a), inventory(i), take item(take), drop item(d), save(s), quit(q)"); 
+            //Commands commands = new Commands("(commands(c)), look(l), move (m), talk to NPC (talk), attack(a), inventory(i), take item(take), drop item(d), save(s), quit(q)"); 
+
+            Commands commands = new Commands(); 
 
             start(player, areas, commands); 
         }
