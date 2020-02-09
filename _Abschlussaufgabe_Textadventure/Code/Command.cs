@@ -36,7 +36,30 @@ namespace Code
 
                 case "l": 
                 case "look": 
-                Console.WriteLine(actualArea.Description); 
+                Console.WriteLine(actualArea.Description);
+                List<Item> areaItems = actualArea.Items;
+                int numberOfItems = areaItems.Count; 
+
+                Console.WriteLine("You see: "); 
+
+                if (numberOfItems == 0)
+                {
+                    Console.WriteLine("No Items."); 
+                }
+
+                if (numberOfItems == 1)
+                { 
+                    Console.WriteLine(areaItems[0].Description); 
+                }
+
+                else 
+                {
+                    foreach (Item aItem in areaItems)
+                    { 
+                        Console.WriteLine(aItem.Name); 
+                        Console.WriteLine(aItem.Description); 
+                    } 
+                }
                 break; 
 
                 case "talk": 
