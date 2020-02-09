@@ -48,7 +48,7 @@ namespace Code
 
                else
                {
-                   Console.WriteLine(defendingCharacter.name + ":" + defendingCharacter.ifAttacked); 
+                   Console.WriteLine(defendingCharacter.name + ": " + defendingCharacter.ifAttacked); 
                }
            //} 
        }
@@ -135,8 +135,18 @@ namespace Code
            
        }
 
-       public void move (Area actualArea, Area[] areas)
+       public void move (Area[] areas)
        {
+           Area actualArea = null;  
+            foreach (Area aArea in areas)
+                {
+                    if(aArea.isActualArea == true) 
+                    {
+                        actualArea = aArea;
+                        //Console.WriteLine(actualArea.description); 
+                    }
+                }
+
            string positon = actualArea.position;
 
            Area middleArea = null;  
@@ -151,7 +161,13 @@ namespace Code
 
            if (positon == "n" || positon == "north" || positon == "e" || positon == "east" || positon == "s" || positon == "south" || positon == "w" || positon == "west")
            {
+               foreach (Area aArea in areas)
+                {
+                    aArea.isActualArea = false; 
+                }
+
                actualArea = middleArea; 
+               middleArea.isActualArea = true; 
                Console.WriteLine(middleArea.description); 
            }
 
@@ -173,6 +189,8 @@ namespace Code
                         {
                             if (aArea.position == "n" || aArea.position == "north")
                             {
+                                actualArea.isActualArea = false; 
+                                aArea.isActualArea = true; 
                                 actualArea = aArea; 
                                 Console.WriteLine(aArea.description); 
                             }
@@ -185,6 +203,8 @@ namespace Code
                         {
                             if (aArea.position == "e" || aArea.position == "east")
                             {
+                                actualArea.isActualArea = false; 
+                                aArea.isActualArea = true; 
                                 actualArea = aArea; 
                                 Console.WriteLine(aArea.description); 
                             }
@@ -197,6 +217,8 @@ namespace Code
                         {
                             if (aArea.position == "s" || aArea.position == "south")
                             {
+                                actualArea.isActualArea = false; 
+                                aArea.isActualArea = true; 
                                 actualArea = aArea; 
                                 Console.WriteLine(aArea.description); 
                             }
@@ -209,8 +231,10 @@ namespace Code
                         {
                             if (aArea.position == "w" || aArea.position == "west")
                             {
+                                actualArea.isActualArea = false; 
+                                aArea.isActualArea = true; 
                                 actualArea = aArea; 
-                                Console.WriteLine(aArea.description); 
+                                Console.WriteLine(aArea.description);  
                             }
                         }
                         break;

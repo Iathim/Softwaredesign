@@ -5,12 +5,30 @@ namespace Code
 {
     class Program
     {
-        public static void start(PlayerCharacter character, Area actualArea, Area[] areas, Commands commands)
+        public static void start(PlayerCharacter character, Area[] areas, Commands commands)
         {
-            Console.WriteLine(actualArea.description); 
+            /*Area actualArea = null;  
+            foreach (Area aArea in areas)
+                {
+                    if(aArea.isActualArea == true) 
+                    {
+                        actualArea = aArea;
+                        Console.WriteLine(actualArea.description); 
+                    }
+                }*/
 
             while(true)
             {
+                Area actualArea = null;  
+            foreach (Area aArea in areas)
+                {
+                    if(aArea.isActualArea == true) 
+                    {
+                        actualArea = aArea;
+                        //Console.WriteLine(actualArea.description); 
+                    }
+                }
+
                 Commands.useCommands(character, actualArea, areas, commands); 
             }
         }
@@ -71,9 +89,9 @@ namespace Code
 
             PlayerCharacter player = new PlayerCharacter("MainDude", 100, 20, false, true, null);
 
-            Commands commands = new Commands("commands(c), look(l), move (m), talk to NPC (talk), attack(a), inventory(i), take item(take), drop item(d), save(s), quit(q)"); 
+            Commands commands = new Commands("(commands(c)), look(l), move (m), talk to NPC (talk), attack(a), inventory(i), take item(take), drop item(d), save(s), quit(q)"); 
 
-            start(player, actualArea, areas, commands); 
+            start(player, areas, commands); 
         }
     }
 }

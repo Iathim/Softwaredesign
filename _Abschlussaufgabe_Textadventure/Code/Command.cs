@@ -28,10 +28,10 @@ namespace Code
 
             switch (userInput)
             {
-                case "c":
+                /*case "c":
                 case "commands":  
                 showCommands(commands); 
-                break;  
+                break; */
 
                 case "l": 
                 case "look": 
@@ -51,7 +51,7 @@ namespace Code
 
                 case "m":
                 case "move": 
-                character.move(actualArea, areas); 
+                character.move(areas); 
                 break; 
 
                 case "take": 
@@ -83,7 +83,7 @@ namespace Code
 
                 default: 
                 Console.WriteLine("I don't understand this. Please use one of the following commands");
-                showCommands(commands); 
+                //showCommands(commands); 
                 break; 
             } 
         }

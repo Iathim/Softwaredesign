@@ -84,7 +84,7 @@ namespace Code
 
            else
            {
-                Console.WriteLine(character.dialogue);
+                Console.WriteLine(character.name + ": " + character.dialogue);
            } 
        } 
 
