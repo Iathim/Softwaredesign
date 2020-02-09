@@ -1,5 +1,11 @@
 ﻿using System;
+using System.IO; 
 using System.Collections.Generic;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq; 
+using Newtonsoft.Json.Serialization;  
+using System.Text.Json;
+using System.Text.Json.Serialization; 
 
 namespace Code
 {
@@ -97,7 +103,7 @@ namespace Code
 
                 case "s":
                 case "save": 
-                saveGame();  
+                saveGame(character, areas);  
                 break; 
 
                 case "q":
@@ -111,10 +117,92 @@ namespace Code
                 break; 
             } 
         }
-
-        public static void saveGame()
+        public static void saveGame(PlayerCharacter player, Area[] areas)
         {
+            JObject playerCharacter = new JObject(
+            new JProperty("Name", player.Name),
+            new JProperty("HP", player.HP),
+            new JProperty("Damage", player.Damage),
+            new JProperty("IsDead", player.IsDead),
+            new JProperty("IsPlayerCharacter", player.IsPlayerCharacter), 
+            new JProperty("Inventory", player.Inventory)); 
 
+            File.WriteAllText(@"c:\PlayerCharacter.json", playerCharacter.ToString());
+
+            
+            using (StreamWriter playerFile = File.CreateText(@"c:\PlayerCharacter.json"))
+            using (JsonTextWriter writer = new JsonTextWriter(playerFile))
+            {
+                playerCharacter.WriteTo(writer);
+            }
+
+            JObject area = new JObject(
+            new JProperty("Description", areas[0].Description),
+            new JProperty("Items", "items1"),
+            new JProperty("NPC", "npc1"),
+            new JProperty("Type", areas[0].Type),
+            new JProperty("Position", areas[0].Position), 
+            new JProperty("IsActualArea", areas[0].IsActualArea)); 
+
+            JObject area2 = new JObject(
+            new JProperty("Description", areas[1].Description),
+            new JProperty("Items", "items2"),
+            new JProperty("NPC", "npc2"),
+            new JProperty("Type", areas[1].Type),
+            new JProperty("Position", areas[1].Position), 
+            new JProperty("IsActualArea", areas[1].IsActualArea));
+
+            JObject area3 = new JObject(
+            new JProperty("Description", areas[2].Description),
+            new JProperty("Items", "items3"),
+            new JProperty("NPC", "npc3"),
+            new JProperty("Type", areas[2].Type),
+            new JProperty("Position", areas[2].Position), 
+            new JProperty("IsActualArea", areas[2].IsActualArea)); 
+
+            JObject area4 = new JObject(
+            new JProperty("Description", areas[3].Description),
+            new JProperty("Items", "items4"),
+            new JProperty("NPC", "npc4"),
+            new JProperty("Type", areas[3].Type),
+            new JProperty("Position", areas[3].Position), 
+            new JProperty("IsActualArea", areas[3].IsActualArea)); 
+
+            JObject area5 = new JObject(
+            new JProperty("Description", areas[4].Description),
+            new JProperty("Items", "items5"),
+            new JProperty("NPC", "npc5"),
+            new JProperty("Type", areas[4].Type),
+            new JProperty("Position", areas[4].Position), 
+            new JProperty("IsActualArea", areas[4].IsActualArea)); 
+
+            area.Add(area2); 
+            area.Add(area3); 
+            area.Add(area4); 
+            area.Add(area5); 
+
+
+            File.WriteAllText(@"c:\PlayerCharacter.json", area.ToString());
+
+            
+            using (StreamWriter file = File.CreateText(@"c:\area.json"))
+            using (JsonTextWriter writer = new JsonTextWriter(file))
+            {
+                area.WriteTo(writer);
+            }
+
+            /*JObject item1 = new JObject(
+            new JProperty("Name", areas[0].Items),
+            new JProperty("Description", player.Inventory)); 
+
+            File.WriteAllText(@"c:\PlayerCharacter.json", playerCharacter.ToString());
+
+            
+            using (StreamWriter playerFile = File.CreateText(@"c:\PlayerCharacter.json"))
+            using (JsonTextWriter writer = new JsonTextWriter(playerFile))
+            {
+                playerCharacter.WriteTo(writer);
+            }*/
         }
 
         public static void quitGame()

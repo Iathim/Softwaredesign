@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\Code.csproj": {}
+    "c:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\Code.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\Code.csproj": {
+    "c:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\Code.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\Code.csproj",
+        "projectUniqueName": "c:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\Code.csproj",
         "projectName": "Code",
-        "projectPath": "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\Code.csproj",
+        "projectPath": "c:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\Code.csproj",
         "packagesPath": "C:\\Users\\Merit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\obj\\",
+        "outputPath": "c:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Merit\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -35,6 +35,12 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
