@@ -130,11 +130,5 @@
             "Type":"normal",
             "Position":"m"
         }
-    ], 
-    "Commands": 
-    [
-        {
-            "Commands": "(commands(c)), look(l), move (m), talk to NPC (talk), attack(a), inventory(i), take item(take), drop item(d), save(s), quit(q)"
-        }
     ]
 }

@@ -35,7 +35,7 @@ namespace Code
         }
         static void Main(string[] args)
         {
-            List<Item> items1 = new List<Item>(); 
+            /*List<Item> items1 = new List<Item>(); 
             items1.Add(new Item("Banana", "Fruit"));
 
             List<Item> items2 = new List<Item>(); 
@@ -94,9 +94,12 @@ namespace Code
 
             //Commands commands = new Commands("(commands(c)), look(l), move (m), talk to NPC (talk), attack(a), inventory(i), take item(take), drop item(d), save(s), quit(q)"); 
 
-            Commands commands = new Commands(); 
+            Commands commands = new Commands(); */
 
-            start(player, areas, commands); 
+             
+            readJSON.LoadItems();
+
+            //start(player, areas, commands); 
         }
     }
 }

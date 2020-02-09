@@ -1,0 +1,22 @@
+    [
+        {
+            "Name":"Weapon",
+            "Description":"Does Boom!"
+        },
+        {
+            "Name":"Knife",
+            "Description":"Doesn't Boom"
+        },
+        {
+            "Name":"Pickle",
+            "Description":"Wtf?"
+        },
+        {
+            "Name":"Lamp",
+            "Description":"Does light!"
+        },
+        {
+            "Name":"Stick",
+            "Description":"May as well be a straw"
+        }
+    ]
