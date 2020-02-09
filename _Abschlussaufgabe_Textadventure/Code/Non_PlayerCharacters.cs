@@ -67,12 +67,31 @@ namespace Code
        {
            List<Item> inventory = character.Inventory; 
 
-            foreach (Item aItem in inventory)
-            {
-                Console.WriteLine(character.Name + " dropped " + aItem + " into the area."); 
+           int numberOfItems = area.NPC.Inventory.Count;
 
-                area.Items.Add(aItem); 
-            } 
+           if (numberOfItems == 0)
+           {
+               Console.WriteLine(character.Name + " left nothing behind."); 
+           }
+
+           if (numberOfItems == 1)
+           {
+                Item item = inventory[0]; 
+                Console.WriteLine(character.Name + " dropped " + item.Name + " into the area."); 
+                area.Items.Add(item);  
+                inventory.Remove(item);
+           }
+           else
+           {
+               foreach (Item aItem in inventory)
+                {
+                    Console.WriteLine(character.Name + " dropped " + aItem + " into the area."); 
+
+                    area.Items.Add(aItem); 
+                } 
+
+                inventory.Clear(); 
+           }
        } 
 
        public override void talk(NPC character)

@@ -7,27 +7,28 @@ namespace Code
     {
         public static void start(PlayerCharacter character, Area[] areas, Commands commands)
         {
-            /*Area actualArea = null;  
-            foreach (Area aArea in areas)
-                {
-                    if(aArea.isActualArea == true) 
-                    {
-                        actualArea = aArea;
-                        Console.WriteLine(actualArea.description); 
-                    }
-                }*/
 
-            while(true)
-            {
-                Area actualArea = null;  
+            Area actualArea = null;  
             foreach (Area aArea in areas)
                 {
                     if(aArea.IsActualArea == true) 
                     {
                         actualArea = aArea;
-                        //Console.WriteLine(actualArea.description); 
+                        Console.WriteLine(actualArea.Description); 
                     }
                 }
+
+            while(true)
+            {
+                actualArea = null;  
+                foreach (Area aArea in areas)
+                    {
+                        if(aArea.IsActualArea == true) 
+                        {
+                            actualArea = aArea;
+                            //Console.WriteLine(actualArea.description); 
+                        }
+                    }
 
                 Commands.useCommands(character, actualArea, areas, commands); 
             }
@@ -48,6 +49,7 @@ namespace Code
 
             List<Item> items5 = new List<Item>(); 
             items5.Add(new Item ("Pear", "Fruit")); 
+            items5.Add(new Item ("Bread", "Baking")); 
 
 
             List<Item> npcItem1 = new List<Item>(); 
@@ -86,8 +88,9 @@ namespace Code
             areas[4] = areaS; 
 
             Area actualArea = areaM;  
+            List<Item> inventory = new List<Item>(); 
 
-            PlayerCharacter player = new PlayerCharacter("MainDude", 100, 20, false, true, null);
+            PlayerCharacter player = new PlayerCharacter("MainDude", 100, 20, false, true, inventory);
 
             //Commands commands = new Commands("(commands(c)), look(l), move (m), talk to NPC (talk), attack(a), inventory(i), take item(take), drop item(d), save(s), quit(q)"); 
 

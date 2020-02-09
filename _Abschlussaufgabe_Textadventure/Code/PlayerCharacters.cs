@@ -79,27 +79,50 @@ namespace Code
        //public override void dropItem(PlayerCharacter character, Area area)
        public void dropItem(PlayerCharacter character, Area area)
        {
-           Console.Write("Which Item would you like to drop?"); 
+           int numberOfItems = character.Inventory.Count;
+
+           List<Item> areaItems = area.Items;  
 
            List<Item> inventory = character.Inventory; 
 
-            foreach (Item aItem in inventory)
-            {
-                Console.WriteLine(aItem);
-            } 
+           Item tempItem = null; 
 
-           Console.WriteLine("Please write the name of the item you'd like to drop."); 
+           if (numberOfItems == 0)
+           {
+               Console.WriteLine("There is nothing in here so you dropped a bit of dust."); 
+           }
 
-           string userInput = Console.ReadLine(); 
+           if (numberOfItems == 1)
+           {
+               tempItem = inventory[0]; 
+               Console.WriteLine("You dropped " + tempItem.Name + " into the area"); 
+               areaItems.Add(tempItem);
+               inventory.Remove(tempItem);   
+           }
 
-           foreach (Item aItem in inventory)
-            {
-                if (userInput == aItem.Name)
+           if(numberOfItems >=2)
+           {
+                Console.Write("Which Item would you like to drop?");
+
+                foreach (Item aItem in inventory)
                 {
-                area.Items.Add(aItem); 
-                inventory.Remove(aItem);
-                }
-            }     
+                    Console.WriteLine(aItem.Name);
+                } 
+
+                Console.WriteLine("Please write the name of the item you'd like to drop."); 
+
+                string userInput = Console.ReadLine(); 
+
+                foreach (Item aItem in inventory)
+                    {
+                        if (userInput == aItem.Name)
+                        {
+                        area.Items.Add(aItem); 
+                        tempItem = aItem; 
+                        }
+                    } 
+                inventory.Remove(tempItem);
+            }
        } 
 
 
@@ -127,14 +150,15 @@ namespace Code
 
             if(inventory == null)
             {
-                Console.WriteLine("There is nothing in here"); 
+                Console.WriteLine("There is nothing in here... except quite a lot of fluff."); 
             }
 
             else
             {
                 foreach (Item aItem in inventory)
                 {
-                    Console.WriteLine(aItem);
+                    Console.WriteLine(aItem.Name);
+                    Console.WriteLine(aItem.Description); 
                 }
             }
         }
@@ -272,7 +296,9 @@ namespace Code
        {
             List <Item> items = area.Items; 
 
-            int numberOfItems = area.Items.Count; 
+            int numberOfItems = area.Items.Count;
+
+            List <Item> characterInventory = character.Inventory;  
 
             if (numberOfItems == 0)
             {
@@ -281,31 +307,43 @@ namespace Code
 
             if (numberOfItems == 1)
             {
-                foreach (Item aItem in items)
-                {
-                    Console.WriteLine(aItem); 
-                    character.Inventory.Add(aItem); 
-                    //character.putItemnInInventory(aItem, character); 
-                }
+                Item item = items[0]; 
+                Console.WriteLine(item.Description); 
+                characterInventory.Add(item);  
+                items.Remove(item); 
             }
 
             else
             {
                 foreach (Item aItem in items)
                 {
-                    Console.WriteLine(aItem);
+                    Console.WriteLine(aItem.Name);
                 }
 
                 Console.WriteLine("Which Item would you like to take? Please write the name of it."); 
 
-                string userInput = Console.ReadLine();
+                string userInput = Console.ReadLine(); 
 
-                foreach (Item aItem in items)
+                List<Item> tempItems = area.Items; 
+                Item tempItem = null; 
+
+                foreach (Item aItem in tempItems)
                 {
                     if (aItem.Name == userInput)
                     {
                         character.putItemnInInventory(aItem, character); 
+                        tempItem = aItem; 
                     }
+                }
+                if (tempItem != null)
+                {
+                    Console.WriteLine("You put " + tempItem.Name + " in your inventory."); 
+                    items.Remove(tempItem); 
+                }
+
+                else
+                {
+                    Console.WriteLine("No Item matches this name."); 
                 }
             }
        }

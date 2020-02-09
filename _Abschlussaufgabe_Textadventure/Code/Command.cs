@@ -62,7 +62,7 @@ namespace Code
                 break; 
 
                 case "i": 
-                case "inventory":
+                case "inventory": 
                 character.showInventory(character); 
                 break; 
 
@@ -83,7 +83,7 @@ namespace Code
                 break; 
 
                 default: 
-                Console.WriteLine("I don't understand this. Please use one of the following commands");
+                Console.WriteLine("I don't understand this. Please use one of the following commands:");
                 //showCommands(commands); 
                 break; 
             } 
