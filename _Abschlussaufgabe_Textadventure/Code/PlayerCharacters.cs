@@ -178,7 +178,7 @@ namespace Code
            
        }
 
-       public void move (Area[] areas)
+       public void move (List<Area> areas)
        {
            Area actualArea = null;  
             foreach (Area aArea in areas)

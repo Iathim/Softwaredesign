@@ -5,7 +5,7 @@ namespace Code
 {
     class Program
     {
-        public static void start(PlayerCharacter character, Area[] areas, Commands commands)
+        public static void start(PlayerCharacter character, List<Area> areas, Commands commands)
         {
 
             Area actualArea = null;  
@@ -55,8 +55,8 @@ namespace Code
 
                areas.Add(new Area(elem[0], elem1, elem2, elem[3], elem[4], elem5)); 
                
-               Console.WriteLine("Description: {0}, Items: {1}, NPC: {2}, Type: {3}, Position: {4}, IsActualArea: {5}" ,
-                elem[0], elem[1], elem[2], elem[3], elem[4], elem[5]);
+               /*Console.WriteLine("Description: {0}, Items: {1}, NPC: {2}, Type: {3}, Position: {4}, IsActualArea: {5}" ,
+                elem[0], elem[1], elem[2], elem[3], elem[4], elem[5]);*/
            }
            Console.Write(Environment.NewLine);
 
@@ -73,8 +73,8 @@ namespace Code
 
                npcs.Add(new NPC(elem[0], elem1, elem2, elem3, elem4, elem5, elem[6], elem[7])); 
 
-               Console.WriteLine("Name: {0}, HP: {1}, Damage: {2}, isDead: {3}, isPlayerCharacter: {4}, Inventory: {5}, Dialogue: {6}" ,
-                elem[0], elem[1], elem[2], elem[3], elem[4], elem[5], elem[6]);
+               /*Console.WriteLine("Name: {0}, HP: {1}, Damage: {2}, isDead: {3}, isPlayerCharacter: {4}, Inventory: {5}, Dialogue: {6}" ,
+                elem[0], elem[1], elem[2], elem[3], elem[4], elem[5], elem[6]);*/
            }
            Console.Write(Environment.NewLine);
 
@@ -83,8 +83,8 @@ namespace Code
            List<String[]> npcItemsString = readJSON.LoadNPCItems();
            foreach (String[] elem in npcItemsString)
            {
-               npcItems.Add(new Item(elem[1], elem[2])); 
-               Console.WriteLine("Name: {0}, Description: {1}", elem[0], elem[1]);
+               npcItems.Add(new Item(elem[0], elem[1])); 
+               //Console.WriteLine("Name: {0}, Description: {1}", elem[0], elem[1]);
            }
 
 
@@ -101,9 +101,26 @@ namespace Code
                player = new PlayerCharacter(elem[0], elem1, elem2, elem3, elem4, elem5); 
                //player.Add(new PlayerCharacter(elem[0], elem1, elem2, elem3, elem4, elem5)); 
                
-               Console.WriteLine("Name: {0}, HP: {1}, Damage: {2}, isDead: {3}, isPlayerCharacter: {4}, Inventory: {5}" ,
-                elem[0], elem[1], elem[2], elem[3], elem[4], elem[5]);
+               /*Console.WriteLine("Name: {0}, HP: {1}, Damage: {2}, isDead: {3}, isPlayerCharacter: {4}, Inventory: {5}" ,
+                elem[0], elem[1], elem[2], elem[3], elem[4], elem[5]);*/
            }
+
+           NPC npc0 = npcs[0]; 
+           //List<Item> items0 = npcItems[0]; 
+           //npc0.Inventory = npcItems[0]; 
+           areas[0].NPC = npc0; 
+
+            NPC npc1 = npcs[1]; 
+            areas[1].NPC = npc1; 
+
+            NPC npc2 = npcs[2];
+            areas[2].NPC = npc2; 
+
+            NPC npc3 = npcs[3]; 
+            areas[3].NPC = npc3; 
+
+            NPC npc4 = npcs[4]; 
+            areas[4].NPC = npc4; 
         }
     }
 }

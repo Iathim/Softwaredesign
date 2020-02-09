@@ -6,7 +6,8 @@
             "isDead":false,
             "isPlayerCharacter":false,
             "Inventory":"npcItem1",
-            "Dialogue":"Haha I'm evil."
+            "Dialogue":"Haha I'm evil.", 
+            "IfAttacked": "Aua."
         },
         {
             "Name":"Kans",
@@ -15,7 +16,8 @@
             "isDead":false,
             "isPlayerCharacter":false,
             "Inventory":"npcItem2",
-            "Dialogue":"Haha."
+            "Dialogue":"Haha.", 
+            "IfAttacked": "Aua."
         },
         {
             "Name":"Sans",
@@ -24,7 +26,8 @@
             "isDead":false,
             "isPlayerCharacter":false,
             "Inventory":"npcItem3",
-            "Dialogue":"OI!"
+            "Dialogue":"OI!", 
+            "IfAttacked": "Aua."
         },
         {
             "Name":"Fans",
@@ -33,7 +36,8 @@
             "isDead":false,
             "isPlayerCharacter":false,
             "Inventory":"npcItem4",
-            "Dialogue":"Whot."
+            "Dialogue":"Whot.", 
+            "IfAttacked": "Aua."
         },
         {
             "Name":"Lans",
@@ -42,6 +46,7 @@
             "isDead":false,
             "isPlayerCharacter":false,
             "Inventory":"npcItem5",
-            "Dialogue":"Banana!"
+            "Dialogue":"Banana!", 
+            "IfAttacked": "Aua."
         }
     ]

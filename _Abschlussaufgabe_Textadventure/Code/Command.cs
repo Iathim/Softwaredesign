@@ -25,7 +25,7 @@ namespace Code
             Console.WriteLine(commands.Commandos); 
         }
 
-        public void useCommands(PlayerCharacter character, Area actualArea, Area[] areas, Commands commands)
+        public void useCommands(PlayerCharacter character, Area actualArea, List<Area> areas, Commands commands)
         {
             commands.showCommands(); 
 
@@ -117,7 +117,7 @@ namespace Code
                 break; 
             } 
         }
-        public static void saveGame(PlayerCharacter player, Area[] areas)
+        public static void saveGame(PlayerCharacter player, List<Area> areas)
         {
             JObject playerCharacter = new JObject(
             new JProperty("Name", player.Name),
