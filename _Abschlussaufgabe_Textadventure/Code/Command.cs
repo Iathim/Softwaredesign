@@ -19,15 +19,15 @@ namespace Code
             Commandos = "look(l), move (m), talk to NPC (talk), attack(a), inventory(i), take item(take), drop item(d), save(s), quit(q)"; 
         }
 
-        public static void showCommands()
+        public void showCommands()
         {
             Commands commands = new Commands(); 
             Console.WriteLine(commands.Commandos); 
         }
 
-        public static void useCommands(PlayerCharacter character, Area actualArea, Area[] areas, Commands commands)
+        public void useCommands(PlayerCharacter character, Area actualArea, Area[] areas, Commands commands)
         {
-            showCommands(); 
+            commands.showCommands(); 
 
             Console.WriteLine("What would you like to do?"); 
 

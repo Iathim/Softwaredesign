@@ -1,59 +1,73 @@
 using System;
 using System.Collections.Generic;
-//using Newtonsoft.Json;
-
 
 namespace Code
 {
     class readJSON
     {
-        public static void LoadItems()
+        public static List<String[]> LoadItems()
         {
+            List<String[]> items = new List<String[]>();
             String itemString = parseJSONtoString.parseToString("gameData/item.json");
             List<String> itemList = splitObjects.splitObject(itemString);
-
             //Console.WriteLine(itemList);
-        }
-            /*
-
-
-        String icao = null;
-		String callsign = null;
-		int species = 0;
-		Date posTime = null;
-		double longitude = 0;
-		double latitude = 0;
-		double speed = 0;
-		double trak = 0;
-		int altitude = 0;
-
-		// Your code goese here
-		String[] contents = sentence.aircraftSentence.split(",", 0);
-		try 
-		{
-			icao = contents[0];
-			icao = icao.replaceAll("\"", "");
-		}
-		catch(Exception e) { icao = "Unknown"; }
-		try
-		{
-			callsign = contents[1];
-			callsign = callsign.replaceAll("\"", "");
-			callsign = callsign.replaceAll(" ", "");
-		}
-		catch(Exception e) {}
-		species = 0; //Not provided
-		try { posTime = new Date(TimeUnit.SECONDS.toMillis(Long.parseLong(contents[3]))); } catch(Exception e) {}
-		try { longitude = Double.parseDouble(contents[5]); } catch(Exception e) {}
-		try { latitude = Double.parseDouble(contents[6]); } catch(Exception e) {}
-		try { speed = Double.parseDouble(contents[9]); } catch(Exception e) {}
-		try { trak = Double.parseDouble(contents[10]); } catch(Exception e) {}
-		try { altitude = (int) Float.parseFloat(contents[13]); } catch(Exception e) {}
-		
-		BasicAircraft msg = new BasicAircraft(icao, callsign, species, posTime, new Coordinate(latitude, longitude), speed, trak, altitude);
-		
-		return msg;
+            foreach (String elem in itemList)
+            {
+                items.Add(splitObjects.splitAttributes(elem));
             }
-            */
+            return items;
+        }
+
+        public static List<String[]> LoadNPCs()
+        {
+            List<String[]> npcs = new List<String[]>();
+            String npcString = parseJSONtoString.parseToString("gameData/npc.json");
+            List<String> npcList = splitObjects.splitObject(npcString);
+            //Console.WriteLine(npcList);
+            foreach (String elem in npcList)
+            {
+                npcs.Add(splitObjects.splitAttributes(elem));
+            }
+            return npcs;
+        }
+
+        public static List<String[]> LoadAreas()
+        {
+            List<String[]> areas = new List<String[]>();
+            String areaString = parseJSONtoString.parseToString("gameData/area.json");
+            List<String> areaList = splitObjects.splitObject(areaString);
+            //Console.WriteLine(areaList);
+            foreach (String elem in areaList)
+            {
+                areas.Add(splitObjects.splitAttributes(elem));
+            }
+            return areas;
+        }
+
+        public static List<String[]> LoadNPCItems()
+        {
+            List<String[]> npcItems = new List<String[]>();
+            String npcItemString = parseJSONtoString.parseToString("gameData/npcItem.json");
+            List<String> npcItemList = splitObjects.splitObject(npcItemString);
+            //Console.WriteLine(npcItemList);
+            foreach (String elem in npcItemList)
+            {
+                npcItems.Add(splitObjects.splitAttributes(elem));
+            }
+            return npcItems;
+        }
+
+        public static List<String[]> LoadPlayerCharacter()
+        {
+            List<String[]> player = new List<String[]>();
+            String playerString = parseJSONtoString.parseToString("gameData/player.json");
+            List<String> playerList = splitObjects.splitObject(playerString);
+            //Console.WriteLine(npcItemList);
+            foreach (String elem in playerList)
+            {
+                player.Add(splitObjects.splitAttributes(elem));
+            }
+            return player;
+        }
     }
 }

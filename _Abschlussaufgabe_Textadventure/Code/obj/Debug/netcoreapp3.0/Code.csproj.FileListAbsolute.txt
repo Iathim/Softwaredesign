@@ -9,3 +9,5 @@ c:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwarede
 c:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\_Abschlussaufgabe_Textadventure\Code\obj\Debug\netcoreapp3.0\Code.AssemblyInfo.cs
 c:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\_Abschlussaufgabe_Textadventure\Code\obj\Debug\netcoreapp3.0\Code.dll
 c:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\_Abschlussaufgabe_Textadventure\Code\obj\Debug\netcoreapp3.0\Code.pdb
+c:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\_Abschlussaufgabe_Textadventure\Code\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+C:\Users\Merit\OneDrive\Dokumente\Studium\2019_20_WiSe\Softwaredesign\Softwaredesign\_Abschlussaufgabe_Textadventure\Code\obj\Debug\netcoreapp3.0\Code.csproj.CopyComplete

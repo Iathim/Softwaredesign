@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\Code.csproj": {}
+    "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\Code.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\Code.csproj": {
+    "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\Code.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\Code.csproj",
+        "projectUniqueName": "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\Code.csproj",
         "projectName": "Code",
-        "projectPath": "c:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\Code.csproj",
+        "projectPath": "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\Code.csproj",
         "packagesPath": "C:\\Users\\Merit\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\obj\\",
+        "outputPath": "C:\\Users\\Merit\\OneDrive\\Dokumente\\Studium\\2019_20_WiSe\\Softwaredesign\\Softwaredesign\\_Abschlussaufgabe_Textadventure\\Code\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Merit\\AppData\\Roaming\\NuGet\\NuGet.Config"

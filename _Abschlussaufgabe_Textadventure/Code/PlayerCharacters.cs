@@ -117,11 +117,19 @@ namespace Code
                     {
                         if (userInput == aItem.Name)
                         {
-                        area.Items.Add(aItem); 
-                        tempItem = aItem; 
+                            area.Items.Add(aItem); 
+                            tempItem = aItem; 
                         }
                     } 
-                inventory.Remove(tempItem);
+                if (tempItem != null)
+                {
+                    inventory.Remove(tempItem);
+                }
+
+                else
+                {
+                    Console.WriteLine("There is no Item with that name."); 
+                }
             }
        } 
 
@@ -146,7 +154,7 @@ namespace Code
             Commands.quitGame(); 
        }
 
-        public void showInventory(Character character)
+        public void showInventory(PlayerCharacter character)
         {
             List<Item> inventory = character.Inventory; 
 
@@ -215,11 +223,10 @@ namespace Code
 
                string userInput = Console.ReadLine(); 
 
-               if (userInput == "n" || userInput == "e" || userInput == "s" || userInput == "w")
-               {
                    switch (userInput)
                    {
-                       case "n": 
+                       case "n":
+                       case "north":  
 
                        foreach (Area aArea in areas)
                         {
@@ -234,6 +241,7 @@ namespace Code
                         break; 
 
                         case "e": 
+                        case "east": 
 
                        foreach (Area aArea in areas)
                         {
@@ -248,6 +256,7 @@ namespace Code
                         break;
 
                         case "s": 
+                        case "south": 
 
                        foreach (Area aArea in areas)
                         {
@@ -262,6 +271,7 @@ namespace Code
                         break;
 
                         case "w": 
+                        case "west": 
 
                        foreach (Area aArea in areas)
                         {
@@ -274,13 +284,11 @@ namespace Code
                             }
                         }
                         break;
-                   }
-               }
 
-               else
-               {
-                   Console.WriteLine("This was not a valid input"); 
-               }
+                        default: 
+                        Console.WriteLine("This was not a valid input."); 
+                        break; 
+                   }
            }
        }
 
