@@ -1,11 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace Code
 {
 	class splitObjects
 	{
-		public static List<String> splitObject(String objectString)
+		public static List<String> splitOriginalObject(String objectString)
 		{	
 			List<String> objects = new List<String>();
 
@@ -16,14 +17,30 @@ namespace Code
 			foreach (String obj in objectArray)
 			{
 				String cutObject = "";
-				cutObject = obj.Replace("[{", "").Replace("}]", "");
+				cutObject = obj.Replace("[{", "").Replace("}]", "").Replace("\\", "");
 				objects.Add(new String(cutObject));
 				//Console.WriteLine(cutItem);
 			}
 			return objects;
 		}
 
-		public static String[] splitAttributes(String obj)
+		public static List<String> splitSavedObject(String objectString)
+		{	
+			//Console.WriteLine(objectString);
+			List<String> objects = new List<String>();
+			String[] objectArray  = objectString.Split("],[");
+
+			foreach (String obj in objectArray)
+			{
+				String cutObject = "";
+				cutObject = obj.Replace("[[", "").Replace("]]", "").Replace("\\", "");
+				objects.Add(new String(cutObject));
+				//Console.WriteLine(cutObject);
+			}
+			return objects;
+		}
+
+		public static String[] splitOriginalAttributes(String obj)
 		{
 			List<String> attributeList = new List<String>();
 			String[] attributes = obj.Split(",");
@@ -37,5 +54,14 @@ namespace Code
 
 			return attributes;
 		}
+
+		public static String[] splitSavedAttributes(String obj)
+		{
+			List<String> attributeList = new List<String>();
+			String[] attributes = obj.Split(",");
+
+			return attributes;
+		}
+
 	}
 }

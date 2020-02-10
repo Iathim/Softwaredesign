@@ -181,7 +181,7 @@ namespace Code
        public void move (List<Area> areas)
        {
            Area actualArea = null;
-             
+
             foreach (Area aArea in areas)
                 {
                     if(aArea.IsActualArea == true) 
@@ -319,6 +319,7 @@ namespace Code
             if (numberOfItems == 1)
             {
                 Item item = items[0]; 
+                Console.WriteLine(item.Name); 
                 Console.WriteLine(item.Description); 
                 characterInventory.Add(item);  
                 items.Remove(item); 

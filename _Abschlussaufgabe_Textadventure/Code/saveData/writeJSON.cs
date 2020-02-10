@@ -20,18 +20,5 @@ namespace Code
                 serializer.Serialize(file, _data);
             }
         }
-
-        public static void savePlayer(PlayerCharacter player)
-        {
-            String _data = "";
-            _data = JsonConvert.SerializeObject(player);
-            //Console.WriteLine(_data);
-            
-            using (StreamWriter file = File.CreateText("gameData/savedPlayer.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, _data);
-            }
-        }
     }
 }

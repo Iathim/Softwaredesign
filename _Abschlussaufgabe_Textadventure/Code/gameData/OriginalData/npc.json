@@ -41,7 +41,7 @@
 },
 {
 "Name":"Lans",
-"HP":20,
+"HP":40,
 "Damage":2,
 "isDead":false,
 "isPlayerCharacter":false,

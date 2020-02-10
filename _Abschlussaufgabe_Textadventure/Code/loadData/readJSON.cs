@@ -5,69 +5,34 @@ namespace Code
 {
     class readJSON
     {
-        public static List<String[]> LoadItems(string path)
+        public static List<String[]> LoadObjects(String path)
         {
-            List<String[]> items = new List<String[]>();
-            String itemString = parseJSONtoString.parseToString(path);
-            List<String> itemList = splitObjects.splitObject(itemString);
-            //Console.WriteLine(itemList);
-            foreach (String elem in itemList)
+            List<String[]> objects = new List<String[]>();
+            String objectString = parseJSONtoString.parseToString(path);
+            List<String> objectList = splitObjects.splitOriginalObject(objectString);
+            
+            foreach (String elem in objectList)
             {
-                items.Add(splitObjects.splitAttributes(elem));
+                objects.Add(splitObjects.splitOriginalAttributes(elem));
             }
-            return items;
+            return objects;
         }
 
-        public static List<String[]> LoadNPCs(string path)
+        public static List<String[]> LoadSavedObjects(String path)
         {
-            List<String[]> npcs = new List<String[]>();
-            String npcString = parseJSONtoString.parseToString(path);
-            List<String> npcList = splitObjects.splitObject(npcString);
-            //Console.WriteLine(npcList);
-            foreach (String elem in npcList)
-            {
-                npcs.Add(splitObjects.splitAttributes(elem));
-            }
-            return npcs;
-        }
+            List<String[]> objects = new List<String[]>();
+            String objectString = parseJSONtoString.parseToString(path);
+            List<String> objectList = splitObjects.splitSavedObject(objectString);
 
-        public static List<String[]> LoadAreas(string path)
-        {
-            List<String[]> areas = new List<String[]>();
-            String areaString = parseJSONtoString.parseToString(path);
-            List<String> areaList = splitObjects.splitObject(areaString);
-            //Console.WriteLine(areaList);
-            foreach (String elem in areaList)
+            foreach (String str in objectList)
             {
-                areas.Add(splitObjects.splitAttributes(elem));
+                //Console.WriteLine(str);
             }
-            return areas;
-        }
-
-        public static List<String[]> LoadNPCItems(string path)
-        {
-            List<String[]> npcItems = new List<String[]>();
-            String npcItemString = parseJSONtoString.parseToString(path);
-            List<String> npcItemList = splitObjects.splitObject(npcItemString);
-            //Console.WriteLine(npcItemList);
-            foreach (String elem in npcItemList)
+            foreach (String elem in objectList)
             {
-                npcItems.Add(splitObjects.splitAttributes(elem));
+                objects.Add(splitObjects.splitSavedAttributes(elem));
             }
-            return npcItems;
-        }
-
-        public static List<String[]> LoadPlayerCharacter(string path)
-        {
-            List<String[]> player = new List<String[]>();
-            String playerString = parseJSONtoString.parseToString(path);
-            List<String> playerList = splitObjects.splitObject(playerString);
-            //Console.WriteLine(npcItemList);
-            foreach (String elem in playerList)
-            {
-                player.Add(splitObjects.splitAttributes(elem));
-            }
-            return player;
+            return objects;
         }
     }
 }

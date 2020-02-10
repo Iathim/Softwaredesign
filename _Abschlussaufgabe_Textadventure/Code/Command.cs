@@ -119,23 +119,63 @@ namespace Code
         }
         public static void saveGame(List<Item> items, List<NPC> npcs, List<Area> areas, List<Item> npcItems, PlayerCharacter player)
         {
+
             writeJSON.saveData(items, "gameData/savedItems.json");
-            writeJSON.saveData(npcs, "gameData/savedNPCs.json");
-            writeJSON.saveData(areas, "gameData/savedAreas.json");
+
+    
             writeJSON.saveData(npcItems, "gameData/savedNPCItems.json");
-            writeJSON.savePlayer(player);
-            
-            /*
-            List<String[]> StringTest = readJSON.LoadPlayerCharacter("gameData/savedAreas.json");
-            foreach (String[] elem in StringTest)
+        
+
+            List<String[]> npcMock = new List<String[]>();
+            for (int i = 0; i < npcs.Count; i++)
             {
-                foreach (String str in elem)
+                String item = null;
+                if (npcs[i].Inventory != null)
                 {
-                    Console.Write(str + ", ");
-                }
-                Console.WriteLine(Environment.NewLine);
+                    item = "npcItem" + i.ToString();
+                } 
+
+                String[] temp = {npcs[i].Name, npcs[i].HP.ToString(), npcs[i].Damage.ToString(), npcs[i].IsDead.ToString(), npcs[i].IsPlayerCharacter.ToString(), item, npcs[i].Dialogue, npcs[i].IfAttacked};
+                npcMock.Add(temp);
             }
-            */
+            writeJSON.saveData(npcMock, "gameData/savedNPCs.json");
+
+            
+            List<String[]> areaMock = new List<String[]>();
+            for (int i = 0; i < areas.Count; i++)
+            {
+                String item = null;
+                String npc = null;
+
+                if (areas[i].Items != null)
+                {
+                    item = "item" + i.ToString();
+                } 
+                
+                if (areas[i].NPC.IsDead != true) 
+                {
+                    npc = "npc" + i.ToString();
+                }
+
+                String[] temp = {areas[i].Description, item, npc, areas[i].Type, areas[i].Position, areas[i].IsActualArea.ToString()};
+                areaMock.Add(temp);
+            }
+            writeJSON.saveData(areaMock, "gameData/savedAreas.json");
+
+        
+            List<String[]> playerMock = new List<string[]>();
+            String inventory = "empty";
+
+            if (player.Inventory.Count != 0)
+            {
+                for (int i = 0; i < player.Inventory.Count; i++)
+                {
+                    inventory = "inventory" + player.Inventory[i].ToString(); 
+                }
+            }
+            String[] temp2 = {player.Name, player.HP.ToString(), player.Damage.ToString(), player.IsDead.ToString(), player.IsPlayerCharacter.ToString(), inventory};
+            playerMock.Add(temp2);
+            writeJSON.saveData(playerMock, "gameData/savedPlayer.json");
         }
 
         public static void quitGame()
