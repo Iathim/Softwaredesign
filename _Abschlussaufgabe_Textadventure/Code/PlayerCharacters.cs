@@ -180,7 +180,8 @@ namespace Code
 
        public void move (List<Area> areas)
        {
-           Area actualArea = null;  
+           Area actualArea = null;
+             
             foreach (Area aArea in areas)
                 {
                     if(aArea.IsActualArea == true) 

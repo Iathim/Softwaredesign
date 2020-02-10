@@ -1,0 +1,10 @@
+[
+{
+"Name":"Main Chara",
+"HP":100,
+"Damage":20,
+"isDead":false,
+"isPlayerCharacter":true,
+"Inventory":"empty"
+}
+]

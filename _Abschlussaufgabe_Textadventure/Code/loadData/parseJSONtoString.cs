@@ -10,7 +10,8 @@ namespace Code
             using (StreamReader r = new StreamReader(path))
             {
                 String json = r.ReadToEnd();
-                json = json.Replace("\r", "").Replace("\n", "").Replace(" ", "").Replace("\"", "");
+                //json = json.Replace("\r", "").Replace("\n", "").Replace(" ", "").Replace("\"", "");
+                json = json.Replace("\r", "").Replace("\n", "").Replace("\"", "");
                 //Console.WriteLine(json);
                 return json;
             }

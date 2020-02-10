@@ -5,10 +5,10 @@ namespace Code
 {
     class readJSON
     {
-        public static List<String[]> LoadItems()
+        public static List<String[]> LoadItems(string path)
         {
             List<String[]> items = new List<String[]>();
-            String itemString = parseJSONtoString.parseToString("gameData/item.json");
+            String itemString = parseJSONtoString.parseToString(path);
             List<String> itemList = splitObjects.splitObject(itemString);
             //Console.WriteLine(itemList);
             foreach (String elem in itemList)
@@ -18,10 +18,10 @@ namespace Code
             return items;
         }
 
-        public static List<String[]> LoadNPCs()
+        public static List<String[]> LoadNPCs(string path)
         {
             List<String[]> npcs = new List<String[]>();
-            String npcString = parseJSONtoString.parseToString("gameData/npc.json");
+            String npcString = parseJSONtoString.parseToString(path);
             List<String> npcList = splitObjects.splitObject(npcString);
             //Console.WriteLine(npcList);
             foreach (String elem in npcList)
@@ -31,10 +31,10 @@ namespace Code
             return npcs;
         }
 
-        public static List<String[]> LoadAreas()
+        public static List<String[]> LoadAreas(string path)
         {
             List<String[]> areas = new List<String[]>();
-            String areaString = parseJSONtoString.parseToString("gameData/area.json");
+            String areaString = parseJSONtoString.parseToString(path);
             List<String> areaList = splitObjects.splitObject(areaString);
             //Console.WriteLine(areaList);
             foreach (String elem in areaList)
@@ -44,10 +44,10 @@ namespace Code
             return areas;
         }
 
-        public static List<String[]> LoadNPCItems()
+        public static List<String[]> LoadNPCItems(string path)
         {
             List<String[]> npcItems = new List<String[]>();
-            String npcItemString = parseJSONtoString.parseToString("gameData/npcItem.json");
+            String npcItemString = parseJSONtoString.parseToString(path);
             List<String> npcItemList = splitObjects.splitObject(npcItemString);
             //Console.WriteLine(npcItemList);
             foreach (String elem in npcItemList)
@@ -57,10 +57,10 @@ namespace Code
             return npcItems;
         }
 
-        public static List<String[]> LoadPlayerCharacter()
+        public static List<String[]> LoadPlayerCharacter(string path)
         {
             List<String[]> player = new List<String[]>();
-            String playerString = parseJSONtoString.parseToString("gameData/player.json");
+            String playerString = parseJSONtoString.parseToString(path);
             List<String> playerList = splitObjects.splitObject(playerString);
             //Console.WriteLine(npcItemList);
             foreach (String elem in playerList)
