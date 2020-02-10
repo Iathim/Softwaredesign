@@ -1,4 +1,4 @@
-[{"Description":"Gruen",
+[{"Description":"The first thing you notice when you walk into the room is that the rooms seems strangely normal. The further you walk into the room the the stronger the feeling of being observed gets.",
 "Items":"items1",
 "NPC":"npc1",
 "Type":"normal",
@@ -6,7 +6,7 @@
 "IsActualArea":"false"
 },
 {
-"Description":"Rot",
+"Description":"You walk towards the room to your left and as soon as you open the door you see a big window. The rooms seems to be some kind of observatory. You look out of the window to the bright ouside but you can't seem to make out any shapes.",
 "Items":"items2",
 "NPC":"npc2",
 "Type":"normal",
@@ -14,7 +14,7 @@
 "IsActualArea":"false"
 },
 {
-"Description":"Blau",
+"Description":"The room you enter is dark but there is just enough light to see the outlines of the room. You see something moving along the walls but it has no shape.",
 "Items":"items3",
 "NPC":"npc3",
 "Type":"normal",
@@ -22,7 +22,7 @@
 "IsActualArea":"false"
 },
 {
-"Description":"Lila",
+"Description":"You walk to the room to you left. After you closed the door behind you music starts playing. The music sounds familiar and strange at the same time.",
 "Items":"items4",
 "NPC":"npc4",
 "Type":"normal",
@@ -30,7 +30,7 @@
 "IsActualArea":"false"
 },
 {
-"Description":"Gelb",
+"Description":"The room seems endless but if you look closer you see four other doors leading out of the room. The room is bright but something feels strange about it. Everytime you turn your had you see something moving in the corner of your eye.",
 "Items":"items5",
 "NPC":"npc5",
 "Type":"normal",

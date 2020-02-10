@@ -1,22 +1,22 @@
 [
 {
-"Name":"Weapon",
-"Description":"Does Boom!"
+"Name":"Flashlight",
+"Description":"The battery of the flashlight is dying."
 },
 {
-"Name":"Knife",
-"Description":"Doesn't Boom"
+"Name":"Handkerchief",
+"Description":"A pretty handkerchief with a strange symbol on it. It reminds you of some kind os strange k."
 },
 {
 "Name":"Pickle",
-"Description":"Wtf?"
+"Description":"Why is there a pickle?"
 },
 {
-"Name":"Lamp",
-"Description":"Does light!"
+"Name":"Rubber Duck",
+"Description":"It is a bright yellow rubber duck. Do ducks have ears?"
 },
 {
 "Name":"Stick",
-"Description":"May as well be a straw"
+"Description":"It is a normal stick made out of wood"
 }
 ]

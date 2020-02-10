@@ -108,7 +108,7 @@ namespace Code
 
                 case "q":
                 case "quit":  
-                quitGame();
+                quitGameRiddle(areas);
                 break; 
 
                 default: 
@@ -176,6 +176,82 @@ namespace Code
             String[] temp2 = {player.Name, player.HP.ToString(), player.Damage.ToString(), player.IsDead.ToString(), player.IsPlayerCharacter.ToString(), inventory};
             playerMock.Add(temp2);
             writeJSON.saveData(playerMock, "gameData/savedPlayer.json");
+        }
+
+        public static void quitGameRiddle(List<Area> areas)
+        {
+            Area middleArea = null; 
+            string correctAnswer = null; 
+
+            Console.WriteLine("You want to escape this hellhole? I see I see..."); 
+            Console.WriteLine("Well. Sorry to disappoint you but I can't have you leave too soon..."); 
+            Console.WriteLine("If you answer my quiestions correctly you may leave."); 
+            Console.WriteLine("If not... well... better not find out."); 
+
+            Console.WriteLine("First question: How many characters did you kill?"); 
+            String userInput = Console.ReadLine(); 
+            Console.WriteLine("Wrong. You forgot the most important one..."); 
+
+            Console.WriteLine("Disappointing, but here is your second question: What was the name of the character in the first room?");
+            userInput = Console.ReadLine();  
+
+            foreach (Area aArea in areas)
+            {
+                if (aArea.Position == "m" || aArea.Position == "middle")
+                {
+                    middleArea = aArea;  
+                }
+            }
+
+            correctAnswer = middleArea.NPC.Name; 
+
+            if (userInput == correctAnswer)
+            {
+                Console.WriteLine("Congrats, at least you know something."); 
+            }
+            
+            else
+            {
+                Console.WriteLine("And here I am... once again disappointed..."); 
+            }
+
+            Console.WriteLine("Second to last question. How many rooms areas are in my little Kingdom?");
+
+            userInput = Console.ReadLine(); 
+
+            switch(userInput)
+            {
+                case "5":
+                case "five":  
+                Console.WriteLine("Wow, you did pay attention."); 
+                break; 
+
+                default: 
+                Console.WriteLine("Stupid human!"); 
+                break; 
+            }
+
+            Console.WriteLine("Last question... Where do you think you are?"); 
+
+            userInput = Console.ReadLine(); 
+
+            if (userInput == "hell" || userInput == "my head")
+            {
+                Console.WriteLine("Well... the best things are left to imagination. Aren't they?"); 
+            }
+
+            else
+            {
+                Console.WriteLine("I hate humans so much...."); 
+            }
+
+            Console.WriteLine("I don't know if you're too stupid or just a bastard.");
+            Console.WriteLine("Anyway, I had enough of you.");  
+            Console.WriteLine("May we meet again... soon"); 
+            Console.WriteLine("Any last words?"); 
+
+            userInput = Console.ReadLine(); 
+            Environment.Exit(0); 
         }
 
         public static void quitGame()

@@ -1,23 +1,23 @@
 [
 {
 "Name":"Hans",
-"HP":20,
-"Damage":2,
+"HP":40,
+"Damage":10,
 "isDead":false,
 "isPlayerCharacter":false,
 "Inventory":"npcItem1",
-"Dialogue":"Haha I'm evil.",
-"IfAttacked":"Aua."
+"Dialogue":"This is a strang place",
+"IfAttacked":"Hey! Why did you do that?"
 },
 {
 "Name":"Kans",
 "HP":20,
-"Damage":2,
+"Damage":5,
 "isDead":false,
 "isPlayerCharacter":false,
 "Inventory":"npcItem2",
-"Dialogue":"Haha.",
-"IfAttacked":"Aua."
+"Dialogue":"Haha hahahahaha",
+"IfAttacked":"Not funny."
 },
 {
 "Name":"Sans",
@@ -26,18 +26,18 @@
 "isDead":false,
 "isPlayerCharacter":false,
 "Inventory":"npcItem3",
-"Dialogue":"OI!",
-"IfAttacked":"Aua."
+"Dialogue":"I tried to leave but somebody did not let me.",
+"IfAttacked":"Why?"
 },
 {
 "Name":"Fans",
-"HP":20,
+"HP":60,
 "Damage":2,
 "isDead":false,
 "isPlayerCharacter":false,
 "Inventory":"npcItem4",
-"Dialogue":"Whot.",
-"IfAttacked":"Aua."
+"Dialogue":"There once was a boy named Harry a descend to be a star.",
+"IfAttacked":"Stop that."
 },
 {
 "Name":"Lans",
@@ -46,7 +46,7 @@
 "isDead":false,
 "isPlayerCharacter":false,
 "Inventory":"npcItem5",
-"Dialogue":"Banana!",
-"IfAttacked":"Aua."
+"Dialogue":"I think I saw something behind you. Watch out.",
+"IfAttacked":"Ouch!"
 }
 ]

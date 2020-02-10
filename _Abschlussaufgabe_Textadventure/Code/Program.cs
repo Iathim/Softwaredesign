@@ -15,6 +15,7 @@ namespace Code
                     if(aArea.IsActualArea == true) 
                     {
                         actualArea = aArea;
+                        Console.WriteLine("You wake up in a strange room with no memory of how you got there."); 
                         Console.WriteLine(actualArea.Description); 
                     }
                 }
@@ -70,7 +71,7 @@ namespace Code
 
             
             Console.WriteLine("Do you want to start a new game or load already saved game data?");
-            Console.WriteLine("Type load if you want to load a saved game."); 
+            Console.WriteLine("Type load if you want to load a saved game. Press any key to start a new game."); 
             string userInput = Console.ReadLine();  
 
 
