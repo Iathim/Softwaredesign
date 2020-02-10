@@ -32,7 +32,9 @@ namespace Code
 
            playerHP = remainingHP; 
 
-            if (remainingHP <= 0)
+           defendingCharacter.HP = playerHP; 
+
+            if (playerHP <= 0)
             {
                 defendingCharacter.IsDead = true;
 
@@ -45,7 +47,8 @@ namespace Code
 
             else 
             {
-                Console.WriteLine("Your remaining HP are " + remainingHP); 
+                Console.WriteLine("Your remaining HP are " + playerHP); 
+                defendingCharacter.HP = remainingHP; 
             }
        }
 
