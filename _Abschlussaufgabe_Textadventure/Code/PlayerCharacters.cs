@@ -149,7 +149,8 @@ namespace Code
             Console.WriteLine("GAME OVER"); 
             Console.WriteLine("The Game does quit itself now."); 
 
-            System.Threading.Thread.Sleep(7000);
+            Console.WriteLine("Press any key to close the game."); 
+            string userInput = Console.ReadLine(); 
 
             Commands.quitGame(); 
        }
