@@ -157,7 +157,7 @@ namespace Code
                     npc = "npc" + i.ToString();
                 }
 
-                String[] temp = {areas[i].Description, item, npc, areas[i].Type, areas[i].Position, areas[i].IsActualArea.ToString()};
+                String[] temp = {areas[i].Description, item, npc, areas[i].Type, areas[i].Position, areas[i].IsCurrentArea.ToString()};
                 areaMock.Add(temp);
             }
             writeJSON.saveData(areaMock, "gameData/savedAreas.json");

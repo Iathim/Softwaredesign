@@ -12,7 +12,7 @@ namespace Code
             Area actualArea = null;  
             foreach (Area aArea in areas)
                 {
-                    if(aArea.IsActualArea == true) 
+                    if(aArea.IsCurrentArea == true) 
                     {
                         actualArea = aArea;
                         Console.WriteLine("You wake up in a strange room with no memory of how you got there."); 
@@ -25,7 +25,7 @@ namespace Code
                 actualArea = null;  
                 foreach (Area aArea in areas)
                     {
-                        if(aArea.IsActualArea == true) 
+                        if(aArea.IsCurrentArea == true) 
                         {
                             actualArea = aArea;
                             //Console.WriteLine(actualArea.description); 

@@ -185,7 +185,7 @@ namespace Code
 
             foreach (Area aArea in areas)
                 {
-                    if(aArea.IsActualArea == true) 
+                    if(aArea.IsCurrentArea == true) 
                     {
                         actualArea = aArea;
                         //Console.WriteLine(actualArea.description); 
@@ -208,11 +208,11 @@ namespace Code
            {
                foreach (Area aArea in areas)
                 {
-                    aArea.IsActualArea = false; 
+                    aArea.IsCurrentArea = false; 
                 }
 
                actualArea = middleArea; 
-               middleArea.IsActualArea = true; 
+               middleArea.IsCurrentArea = true; 
                Console.WriteLine("You're gpoing back to the main room."); 
                Console.WriteLine(middleArea.Description); 
            }
@@ -234,8 +234,8 @@ namespace Code
                         {
                             if (aArea.Position == "n" || aArea.Position == "north")
                             {
-                                actualArea.IsActualArea = false; 
-                                aArea.IsActualArea = true; 
+                                actualArea.IsCurrentArea = false; 
+                                aArea.IsCurrentArea = true; 
                                 actualArea = aArea; 
                                 Console.WriteLine(aArea.Description); 
                             }
@@ -249,8 +249,8 @@ namespace Code
                         {
                             if (aArea.Position == "e" || aArea.Position == "east")
                             {
-                                actualArea.IsActualArea = false; 
-                                aArea.IsActualArea = true; 
+                                actualArea.IsCurrentArea = false; 
+                                aArea.IsCurrentArea = true; 
                                 actualArea = aArea; 
                                 Console.WriteLine(aArea.Description); 
                             }
@@ -264,8 +264,8 @@ namespace Code
                         {
                             if (aArea.Position == "s" || aArea.Position == "south")
                             {
-                                actualArea.IsActualArea = false; 
-                                aArea.IsActualArea = true; 
+                                actualArea.IsCurrentArea = false; 
+                                aArea.IsCurrentArea = true; 
                                 actualArea = aArea; 
                                 Console.WriteLine(aArea.Description); 
                             }
@@ -279,8 +279,8 @@ namespace Code
                         {
                             if (aArea.Position == "w" || aArea.Position == "west")
                             {
-                                actualArea.IsActualArea = false; 
-                                aArea.IsActualArea = true; 
+                                actualArea.IsCurrentArea = false; 
+                                aArea.IsCurrentArea = true; 
                                 actualArea = aArea; 
                                 Console.WriteLine(aArea.Description);  
                             }

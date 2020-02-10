@@ -21,7 +21,7 @@ namespace Code
             this.NPC = _NPC; 
             this.Type = _type;
             this.Position = _position; 
-            this.IsActualArea = _isActualArea; 
+            this.IsCurrentArea = _isActualArea; 
             this.IsLocked = _isOpen; 
             this.ReasonWhyLocked = _reasonWhyLocked; 
             this.ConsequenzFailure = _consequenzFailure; 
